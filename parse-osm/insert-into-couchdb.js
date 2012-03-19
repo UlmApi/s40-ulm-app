@@ -1,4 +1,7 @@
-/* simple script for inserting our json with postboxes into couchdb */
+/* 
+ * simple script for inserting our json with postboxes into couchdb 
+ * usage? see execute-task-chain.sh
+ */
 var request = require('request');
 var fs = require('fs');
 var crypto = require('crypto');
