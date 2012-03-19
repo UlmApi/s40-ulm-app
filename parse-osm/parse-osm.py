@@ -2,9 +2,9 @@
 # script for parsing post boxes from  OpenStreetMap-XML-files 
 #
 # usage: 
-#   curl "http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=post_box%5D%5Bbbox=9.8396,48.3129,10.1407,48.4846%5D" > postboxes.xml
-#   cat postboxes.xml | python parse-osm.py
-
+#   (1) curl "http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=post_box%5D%5Bbbox=9.8396,48.3129,10.1407,48.4846%5D" > postboxes.xml
+#   (2) cat postboxes.xml | python parse-osm.py
+#   (3) node insert-into-couchdb.js
 
 import os
 import sys
