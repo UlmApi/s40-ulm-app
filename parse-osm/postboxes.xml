@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="Osmosis SNAPSHOT-r26564">
+  <node id="204491878" version="2" timestamp="2009-06-11T14:15:44Z" uid="85761" user="klausis" changeset="1487102" lat="48.3349138" lon="9.9368097">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="268201748" version="6" timestamp="2012-03-03T21:11:47Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3635365" lon="9.8790321">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="268548539" version="6" timestamp="2012-03-03T21:11:55Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3274892" lon="10.0955402">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+    <tag k="ele" v="531.10000000"/>
+  </node>
+  <node id="269123656" version="4" timestamp="2010-03-04T21:40:26Z" uid="119794" user="Boman" changeset="4036718" lat="48.4318724" lon="10.0166696">
+    <tag k="postal_code" v="89075"/>
+    <tag k="collection_times" v="Mo-Fr 17:00; Sa 13:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+    <tag k="note" v="Böfinger Steige / Buchenlandweg"/>
+  </node>
+  <node id="269191198" version="1" timestamp="2008-06-08T16:51:29Z" uid="39362" user="closer" changeset="102136" lat="48.4222205" lon="10.0069797">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="269197862" version="1" timestamp="2008-06-08T17:38:27Z" uid="39362" user="closer" changeset="102136" lat="48.420681" lon="10.0156853">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="269775189" version="6" timestamp="2009-04-05T20:17:10Z" uid="31231" user="Andre68" changeset="226296" lat="48.4238551" lon="9.9507878">
+    <tag k="collection_times" v="Mo-Fr 15:00; Sa 12:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="270558344" version="1" timestamp="2008-06-15T21:05:26Z" uid="40241" user="pietzcker" changeset="177425" lat="48.4100273" lon="9.9374141">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="273099798" version="8" timestamp="2012-03-03T21:14:05Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4263403" lon="9.8639178">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="273335370" version="2" timestamp="2009-10-08T13:33:49Z" uid="11925" user="Moddy" changeset="2782315" lat="48.4185427" lon="9.9079936">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="273515533" version="6" timestamp="2012-03-03T21:14:12Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4752931" lon="10.0812636">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="276250701" version="3" timestamp="2009-01-29T22:02:09Z" uid="69628" user="vsandre" changeset="852903" lat="48.3243031" lon="9.9999131">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="278561429" version="8" timestamp="2009-11-29T19:49:03Z" uid="195075" user="unicycle" changeset="3249742" lat="48.408625" lon="9.959525">
+    <tag k="collection_times" v="Mo-Fr 16:45; Sa 12:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="283413400" version="2" timestamp="2008-08-06T22:39:28Z" uid="56786" user="Roamer" changeset="113153" lat="48.3403788" lon="10.0001603">
+    <tag k="created_by" v="Potlatch 0.10b"/>
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="283856293" version="6" timestamp="2011-05-31T18:30:32Z" uid="12096" user="HCX Biker" changeset="8304084" lat="48.3467888" lon="10.0956637">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="287821277" version="5" timestamp="2012-03-03T21:22:30Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3919628" lon="9.9504137">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="287821282" version="5" timestamp="2010-03-09T12:09:52Z" uid="241923" user="iatrogen" changeset="4080375" lat="48.394736" lon="9.9584671">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="287845952" version="4" timestamp="2012-02-15T18:17:47Z" uid="333995" user="mc_oyzo" changeset="10694728" lat="48.4346961" lon="9.9745051">
+    <tag k="ref" v="Briefkasten"/>
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="287846184" version="2" timestamp="2009-06-10T20:27:41Z" uid="85761" user="klausis" changeset="1480978" lat="48.4363931" lon="9.9719085">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="288668948" version="1" timestamp="2008-08-17T08:42:24Z" uid="6833" user="finger-digital" changeset="295615" lat="48.3943017" lon="9.9627995">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="288670841" version="4" timestamp="2009-06-11T14:23:15Z" uid="85761" user="klausis" changeset="1487102" lat="48.3936962" lon="9.9749994">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="289988419" version="8" timestamp="2011-11-19T14:06:46Z" uid="287306" user="Matthias Frank" changeset="9873221" lat="48.3949884" lon="9.9695854">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="290276368" version="6" timestamp="2012-03-03T21:23:53Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4011375" lon="9.9400485">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="292271478" version="1" timestamp="2008-08-30T14:18:07Z" uid="39362" user="closer" changeset="465086" lat="48.4604342" lon="10.1034839">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="294167768" version="2" timestamp="2011-12-26T21:07:15Z" uid="287306" user="Matthias Frank" changeset="10211028" lat="48.4815561" lon="9.9073805">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="294710308" version="3" timestamp="2009-01-29T21:54:46Z" uid="69628" user="vsandre" changeset="852903" lat="48.4488916" lon="9.9868947">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="294710310" version="4" timestamp="2009-04-10T11:54:33Z" uid="49305" user="bronk" changeset="386751" lat="48.4461675" lon="9.9924753">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="295746893" version="5" timestamp="2012-03-03T21:27:53Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4832098" lon="9.98608">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="296602888" version="6" timestamp="2009-06-10T20:23:58Z" uid="85761" user="klausis" changeset="1480978" lat="48.3953573" lon="9.9546411">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="298735956" version="1" timestamp="2008-09-21T15:39:24Z" uid="39362" user="closer" changeset="673245" lat="48.4362696" lon="9.9404086">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="298747346" version="1" timestamp="2008-09-21T16:08:20Z" uid="39362" user="closer" changeset="673245" lat="48.4545753" lon="9.9113604">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="302403375" version="6" timestamp="2012-03-03T21:34:32Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3609727" lon="10.0709176">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="302710037" version="1" timestamp="2008-10-06T21:13:16Z" uid="39362" user="closer" changeset="111128" lat="48.4505832" lon="9.9709166">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="302881644" version="4" timestamp="2009-06-11T14:13:28Z" uid="85761" user="klausis" changeset="1487102" lat="48.355356" lon="9.9850169">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="303773514" version="3" timestamp="2009-01-29T21:47:39Z" uid="69628" user="vsandre" changeset="852903" lat="48.3250753" lon="10.0308834">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="303773518" version="3" timestamp="2009-01-29T21:47:39Z" uid="69628" user="vsandre" changeset="852903" lat="48.3288004" lon="10.030139">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="306540337" version="9" timestamp="2012-03-03T21:38:31Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.460076" lon="9.8426881">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="307620909" version="4" timestamp="2012-03-03T21:39:06Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4822165" lon="9.9804467">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="307818114" version="3" timestamp="2011-07-15T14:20:22Z" uid="168758" user="NUP" changeset="8731731" lat="48.3662883" lon="10.0074399">
+    <tag k="ref" v="Illerholzweg/Ammerweg"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Sa 08:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="308656667" version="8" timestamp="2012-03-03T21:39:46Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3299003" lon="9.9664838">
+    <tag k="collection_times" v="Mo-Sa 08:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+    <tag k="ele" v="501.000000"/>
+  </node>
+  <node id="317025834" version="3" timestamp="2009-01-29T22:00:58Z" uid="69628" user="vsandre" changeset="852903" lat="48.4467015" lon="9.8623941">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Post"/>
+  </node>
+  <node id="322100847" version="3" timestamp="2012-03-03T21:50:05Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3804773" lon="9.9486942">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="324049096" version="4" timestamp="2012-03-03T21:51:06Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3618892" lon="9.9879526">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="324215686" version="3" timestamp="2012-03-03T21:51:07Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3599938" lon="9.9887993">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="334765829" version="7" timestamp="2010-02-25T18:34:14Z" uid="92244" user="Montecristo" changeset="3974234" lat="48.4493568" lon="10.0822249">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="335309629" version="2" timestamp="2010-02-23T19:37:19Z" uid="92244" user="Montecristo" changeset="3957527" lat="48.4514121" lon="10.0804576">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="359947317" version="4" timestamp="2010-12-26T10:15:23Z" uid="67903" user="Rainer Arnold" changeset="6766557" lat="48.3865837" lon="9.9754774">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="365598161" version="3" timestamp="2012-03-03T17:59:41Z" uid="13072" user="Kai Brühne" changeset="10860451" lat="48.4141134" lon="9.9453856">
+    <tag k="collection_times" v="Mo-Fr 16:45; Sa 12:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="366180973" version="2" timestamp="2009-06-11T14:19:27Z" uid="85761" user="klausis" changeset="1487102" lat="48.4135745" lon="9.9504581">
+    <tag k="collection_times" v="Mo-Fr 16:45; Sa 12:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="392418192" version="3" timestamp="2012-03-03T22:32:39Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4046404" lon="9.9662963">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="393268479" version="5" timestamp="2011-07-15T14:20:22Z" uid="168758" user="NUP" changeset="8731731" lat="48.3975461" lon="9.9871108">
+    <tag k="ref" v="Südl. Münsterplatz"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 12:00,17:30,19:00; Sa 12:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="393274241" version="5" timestamp="2012-03-03T22:33:33Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4066407" lon="10.0063755">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="395248700" version="1" timestamp="2009-05-13T10:33:12Z" uid="64012" user="g8o" changeset="1173329" lat="48.4060119" lon="9.9835752">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="401237276" version="3" timestamp="2012-03-03T22:40:52Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4082048" lon="9.9744812">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="420808802" version="2" timestamp="2012-02-07T21:25:23Z" uid="67903" user="Rainer Arnold" changeset="10616996" lat="48.4373006" lon="10.0510645">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="457397869" version="5" timestamp="2012-03-03T23:01:34Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3543022" lon="9.9734885">
+    <tag k="collection_times" v="Mo-Fr 14:30; Sa 12:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="464757622" version="3" timestamp="2009-09-22T14:48:19Z" uid="70696" user="xybot" changeset="2570083" lat="48.3988057" lon="9.9538471">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="464757625" version="2" timestamp="2010-12-05T22:16:48Z" uid="13072" user="Kai Brühne" changeset="6557650" lat="48.4001404" lon="9.9611022">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="503939236" version="1" timestamp="2009-09-21T10:57:21Z" uid="59020" user="NightFlier" changeset="2555716" lat="48.3277056" lon="10.0441419">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="506473020" version="3" timestamp="2012-03-03T23:13:31Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.372028" lon="9.9362382">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="533631809" version="4" timestamp="2010-06-13T07:25:28Z" uid="303391" user="maddde" changeset="4975982" lat="48.3868053" lon="9.9593498">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="536786935" version="1" timestamp="2009-10-20T18:15:12Z" uid="188414" user="MapFe" changeset="2905146" lat="48.409577" lon="9.9486286">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="536791363" version="5" timestamp="2011-09-30T11:49:52Z" uid="287306" user="Matthias Frank" changeset="9434505" lat="48.4002319" lon="9.9838618">
+    <tag k="ref" v="Deutsche Post Ulm (Olgastraße)"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 12:00,17:30,19:00; Sa 12:45; Su 10:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="538960832" version="3" timestamp="2012-03-03T23:21:48Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4126619" lon="10.0018102">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+    <tag k="note" v="Position nicht ganz exakt. Bitte auch die Leerungszeiten noch nachtragen"/>
+  </node>
+  <node id="574955368" version="2" timestamp="2009-12-03T19:40:43Z" uid="26299" user="uboot" changeset="3283392" lat="48.4085729" lon="9.9673666">
+    <tag k="collection_times" v="Mo-Fr 17:45; Sa 12:15; Su 08:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post AG"/>
+  </node>
+  <node id="659764401" version="6" timestamp="2012-03-03T23:48:59Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.35315" lon="10.0637956">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="667335833" version="1" timestamp="2010-03-16T13:59:29Z" uid="247655" user="vmo" changeset="4143551" lat="48.3831078" lon="9.9607639">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="681607673" version="1" timestamp="2010-04-02T15:30:20Z" uid="21061" user="kalauer" changeset="4304681" lat="48.3530571" lon="9.9116946">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="715748451" version="4" timestamp="2012-03-04T00:01:30Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.460936" lon="9.9506704">
+    <tag k="collection_times" v="Mo-Fr 15:45; Sa 11:45"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="736820612" version="4" timestamp="2012-03-04T00:04:15Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3806876" lon="10.0763929">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="736820618" version="4" timestamp="2012-03-04T00:04:15Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3843003" lon="10.0766611">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="759726864" version="8" timestamp="2012-03-04T00:12:05Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3946386" lon="9.9984622">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 12:00,18:30; Sa 12:30; Su 09:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="759726879" version="4" timestamp="2011-07-15T14:20:24Z" uid="168758" user="NUP" changeset="8731731" lat="48.3925315" lon="10.0000843">
+    <tag k="ref" v="Deutsche Post Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 12:00,17:30,18:30; Sa 12:00; Su 09:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="759726901" version="6" timestamp="2011-07-15T14:20:24Z" uid="168758" user="NUP" changeset="8731731" lat="48.3901493" lon="10.0078476">
+    <tag k="ref" v="Steubenstraße (Fachoberschule)"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:15"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="759726986" version="4" timestamp="2011-07-15T14:20:24Z" uid="168758" user="NUP" changeset="8731731" lat="48.3848818" lon="10.0388515">
+    <tag k="ref" v="Briefzentrum Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 14:00,17:00,20:00,23:50; Sa 17:00; Su 14:00,23:50"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="765268049" version="4" timestamp="2011-07-15T14:20:25Z" uid="168758" user="NUP" changeset="8731731" lat="48.3840557" lon="9.9952011">
+    <tag k="ref" v="Baumgartenstraße 44, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 11:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="765358738" version="4" timestamp="2011-07-15T14:20:25Z" uid="168758" user="NUP" changeset="8731731" lat="48.3852689" lon="10.0007844">
+    <tag k="ref" v="Dieselstraße 5, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 11:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="766072623" version="1" timestamp="2010-06-06T21:24:57Z" uid="210344" user="blue-storm" changeset="4922994" lat="48.3241377" lon="10.0611914">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="768764953" version="6" timestamp="2012-03-04T00:14:25Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3893823" lon="9.9904455">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="782481142" version="3" timestamp="2011-07-15T14:20:25Z" uid="168758" user="NUP" changeset="8731731" lat="48.3849453" lon="10.038862">
+    <tag k="ref" v="Briefzentrum Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 14:00,17:00,20:00,23:50; Sa 17:00; Su 14:00,23:50"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="782481162" version="3" timestamp="2011-07-15T14:20:25Z" uid="168758" user="NUP" changeset="8731731" lat="48.3848803" lon="10.0388893">
+    <tag k="ref" v="Briefzentrum Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 14:00,17:00,20:00,23:50; Sa 17:00; Su 14:00,23:50"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="782481184" version="3" timestamp="2011-07-15T14:20:25Z" uid="168758" user="NUP" changeset="8731731" lat="48.3849248" lon="10.038839">
+    <tag k="ref" v="Briefzentrum Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 14:00,17:00,20:00,23:50; Sa 17:00; Su 14:00,23:50"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="791136847" version="2" timestamp="2011-03-21T13:57:35Z" uid="168758" user="NUP" changeset="7627472" lat="48.3430749" lon="10.0352812">
+    <tag k="name" v="Gerlenhofen"/>
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="807108179" version="4" timestamp="2012-03-04T00:25:25Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4101106" lon="10.070205">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="815567706" version="1" timestamp="2010-07-13T18:51:16Z" uid="39268" user="PeterK" changeset="5210825" lat="48.418452" lon="9.89769">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Post AG"/>
+  </node>
+  <node id="846036235" version="3" timestamp="2011-07-29T11:24:19Z" uid="168758" user="NUP" changeset="8862407" lat="48.4015835" lon="10.0224076">
+    <tag k="ref" v="Augsburger Str. 186, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:45; Su 10:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="847210505" version="2" timestamp="2011-04-28T13:35:28Z" uid="26299" user="uboot" changeset="7994831" lat="48.4319243" lon="10.1087641">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="856837984" version="4" timestamp="2011-09-24T19:14:45Z" uid="168758" user="NUP" changeset="9386980" lat="48.3897627" lon="10.0265433">
+    <tag k="ref" v="Bahnhalt Finninger Straße"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:15"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="856838024" version="4" timestamp="2011-07-15T14:20:31Z" uid="168758" user="NUP" changeset="8731731" lat="48.3880357" lon="10.0032901">
+    <tag k="ref" v="Steubenstraße (Bowling-Center)"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:15"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="894165372" version="4" timestamp="2012-03-04T01:02:26Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4232072" lon="9.8966063">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="911189777" version="6" timestamp="2011-07-15T14:20:31Z" uid="168758" user="NUP" changeset="8731731" lat="48.3950178" lon="10.0010264">
+    <tag k="ref" v="Ludwigstraße 6, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 12:00,17:30; Sa 12:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="942391482" version="2" timestamp="2010-10-09T11:02:29Z" uid="355127" user="Schlachter" changeset="5992521" lat="48.426619" lon="10.1255287">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="955850609" version="2" timestamp="2010-11-18T13:53:52Z" uid="13072" user="Kai Brühne" changeset="6400137" lat="48.4026528" lon="9.9961548">
+    <tag k="brand" v="Südwest Mail"/>
+    <tag k="collection_times" v="Mo-Fr 17:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Südwest-Mail Brief+Service GmbH"/>
+  </node>
+  <node id="958191604" version="5" timestamp="2012-03-04T01:16:27Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3931202" lon="9.9932385">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="968176765" version="5" timestamp="2012-03-04T01:18:00Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4033736" lon="9.9905329">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="975892111" version="4" timestamp="2011-07-15T14:20:35Z" uid="168758" user="NUP" changeset="8731731" lat="48.3936814" lon="10.0170263">
+    <tag k="ref" v="Mutschler-Center"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:15"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="975892127" version="5" timestamp="2012-03-04T01:19:38Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3890681" lon="10.0174306">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="975892128" version="3" timestamp="2011-07-15T14:20:35Z" uid="168758" user="NUP" changeset="8731731" lat="48.394419" lon="10.0097304">
+    <tag k="ref" v="Reuttier Straße / Waldeck"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:15; Sa 12:45"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="975892132" version="4" timestamp="2011-07-15T14:20:35Z" uid="168758" user="NUP" changeset="8731731" lat="48.3841338" lon="10.0224334">
+    <tag k="ref" v="Reuttier Straße 122, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 11:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="976486104" version="7" timestamp="2012-03-04T01:19:49Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3994697" lon="9.983466">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1054547826" version="4" timestamp="2012-03-03T19:14:01Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3984534" lon="9.9812186">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1157759916" version="1" timestamp="2011-02-17T18:33:51Z" uid="410630" user="Spadiseius" changeset="7315882" lat="48.4558953" lon="10.1004658">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="1189555660" version="5" timestamp="2011-07-15T14:20:15Z" uid="168758" user="NUP" changeset="8731731" lat="48.3793632" lon="10.0064648">
+    <tag k="ref" v="Memminger Straße 72, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 11:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1202010426" version="7" timestamp="2012-03-03T19:32:57Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3945866" lon="9.9806816">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1225853205" version="1" timestamp="2011-03-30T19:59:50Z" uid="37354" user="bluestone712" changeset="7719999" lat="48.4152814" lon="9.9141067">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="1228416414" version="3" timestamp="2012-03-03T19:37:59Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4024371" lon="10.0005543">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1234939496" version="4" timestamp="2012-03-03T19:39:13Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3968887" lon="9.9937349">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1235140294" version="1" timestamp="2011-04-06T20:30:41Z" uid="72235" user="Basstoelpel" changeset="7788932" lat="48.4329458" lon="9.9832908">
+    <tag k="ref" v="Franzenhauserweg 89081 Ulm-Jungingen"/>
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="1312119033" version="4" timestamp="2011-07-15T14:20:20Z" uid="168758" user="NUP" changeset="8731731" lat="48.3794536" lon="10.0064399">
+    <tag k="ref" v="Memminger Straße 72, 89231 Neu-Ulm"/>
+    <tag k="description" v="Briefkasten Neu-Ulm 1"/>
+    <tag k="brand" v="Logistic-Mail-Factory"/>
+    <tag k="collection_times" v="Mo-Fr 17:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Logistic-Mail-Factory GmbH"/>
+  </node>
+  <node id="1312119058" version="2" timestamp="2011-06-10T18:42:33Z" uid="168758" user="NUP" changeset="8399751" lat="48.3949985" lon="10.0010521">
+    <tag k="ref" v="Ludwigstraße 6, 89231 Neu-Ulm"/>
+    <tag k="description" v="Briefkasten Neu-Ulm 4"/>
+    <tag k="brand" v="Logistic-Mail-Factory"/>
+    <tag k="collection_times" v="Mo-Th 16:00; Fr 14:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Logistic-Mail-Factory GmbH"/>
+  </node>
+  <node id="1312405748" version="3" timestamp="2012-03-03T19:56:18Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.399357" lon="9.9322838">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1319276970" version="1" timestamp="2011-06-10T18:42:31Z" uid="168758" user="NUP" changeset="8399751" lat="48.3989376" lon="10.0111903">
+    <tag k="ref" v="Kantstraße 4, 89231 Neu-Ulm"/>
+    <tag k="description" v="Briefkasten Neu-Ulm 5"/>
+    <tag k="brand" v="Logistic-Mail-Factory"/>
+    <tag k="collection_times" v="Mo-Th 15:30; Fr 14:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Logistic-Mail-Factory GmbH"/>
+  </node>
+  <node id="1319276984" version="2" timestamp="2011-06-11T20:53:15Z" uid="168758" user="NUP" changeset="8409900" lat="48.3841148" lon="10.0224598">
+    <tag k="ref" v="Reuttier Straße 122, 89231 Neu-Ulm"/>
+    <tag k="description" v="Briefkasten Neu-Ulm 2"/>
+    <tag k="brand" v="Logistic-Mail-Factory"/>
+    <tag k="collection_times" v="Mo-Th 16:00; Fr 13:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Logistic-Mail-Factory GmbH"/>
+  </node>
+  <node id="1319276990" version="2" timestamp="2011-06-25T14:36:52Z" uid="168758" user="NUP" changeset="8543086" lat="48.3957902" lon="10.0155715">
+    <tag k="ref" v="Vorwerkstraße 6-20, 89231 Neu-Ulm"/>
+    <tag k="description" v="Briefkasten Neu-Ulm 3"/>
+    <tag k="brand" v="Logistic-Mail-Factory"/>
+    <tag k="collection_times" v="Mo-Th 16:45; Fr 14:45"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Logistic-Mail-Factory GmbH"/>
+  </node>
+  <node id="1319277006" version="2" timestamp="2011-07-15T14:20:20Z" uid="168758" user="NUP" changeset="8731731" lat="48.3721913" lon="9.9887992">
+    <tag k="ref" v="Illerbrücke 4, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Sa 08:00"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1319277013" version="3" timestamp="2012-03-03T19:58:21Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3935968" lon="9.9916121">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1325301158" version="3" timestamp="2012-03-03T19:59:21Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.3316308" lon="10.0403681">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1345231341" version="3" timestamp="2012-03-03T20:02:40Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4106663" lon="10.0404273">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1349324836" version="1" timestamp="2011-07-04T15:55:31Z" uid="475464" user="DoktorHodgins" changeset="8630754" lat="48.3973603" lon="9.9557766">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="1362778426" version="1" timestamp="2011-07-15T14:19:52Z" uid="168758" user="NUP" changeset="8731731" lat="48.4000694" lon="10.025083">
+    <tag k="ref" v="Hartweg 166, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 15:45; Sa 12:30"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1362778440" version="2" timestamp="2011-09-18T15:55:47Z" uid="168758" user="NUP" changeset="9334227" lat="48.4049775" lon="10.0234189">
+    <tag k="ref" v="Pfuhler Straße, 89231 Neu-Ulm"/>
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="collection_times" v="Mo-Fr 16:30; Sa 12:45"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1501883678" version="1" timestamp="2011-11-13T19:06:56Z" uid="553590" user="Skaterboy1976" changeset="9817818" lat="48.4439437" lon="10.0488366">
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="1515998578" version="3" timestamp="2012-03-03T20:34:48Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4089006" lon="9.9889657">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1528032798" version="3" timestamp="2012-03-03T20:35:26Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4009735" lon="9.9852127">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1634337899" version="1" timestamp="2012-02-15T18:17:46Z" uid="333995" user="mc_oyzo" changeset="10694728" lat="48.4327548" lon="9.9685306">
+    <tag k="ref" v="Briefkasten groß"/>
+    <tag k="amenity" v="post_box"/>
+  </node>
+  <node id="1649562468" version="3" timestamp="2012-03-03T20:58:09Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4111734" lon="10.0328651">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1649600425" version="3" timestamp="2012-03-03T20:58:10Z" uid="147510" user="woodpeck_fixbot" changeset="10861079" lat="48.4088997" lon="10.0353128">
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+  <node id="1664664657" version="1" timestamp="2012-03-07T18:01:45Z" uid="168758" user="NUP" changeset="10902187" lat="48.4106147" lon="9.993625">
+    <tag k="brand" v="Deutsche Post"/>
+    <tag k="amenity" v="post_box"/>
+    <tag k="operator" v="Deutsche Post"/>
+  </node>
+</osm>
