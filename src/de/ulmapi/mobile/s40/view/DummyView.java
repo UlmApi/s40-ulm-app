@@ -116,7 +116,7 @@ public final class DummyView extends Form implements CommandListener, ItemComman
 	{
 		if(c == backCommand)
 		{
-			midlet.goBack();
+			midlet.setView(Main.HOME_VIEW);
 		}
 		else if(c == okCommand)
 		{

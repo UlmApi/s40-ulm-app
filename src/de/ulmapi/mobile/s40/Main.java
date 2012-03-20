@@ -1,7 +1,5 @@
 package de.ulmapi.mobile.s40;
 
-import java.util.Stack;
-
 import javax.microedition.lcdui.Display;
 import javax.microedition.lcdui.Displayable;
 import javax.microedition.midlet.MIDlet;
@@ -18,13 +16,13 @@ import de.ulmapi.mobile.s40.view.gui.Refreshable;
 
 public final class Main extends MIDlet
 {
-	public static final int HOME_VIEW = 10;
-	public static final int INFO_VIEW = 11;
+	public static final int HOME_VIEW = 1;
+	public static final int INFO_VIEW = 2;
 
-	public static final int DUMMY_VIEW = 99;
+	public static final int DUMMY_VIEW = 90;
 
-	public static final int STATION_DETAILS_VIEW = 20;
-	public static final int STATION_LIST_VIEW = 21;
+	public static final int STATION_LIST_VIEW = 20;
+	public static final int STATION_DETAILS_VIEW = 21;
 	public static final int STATION_MAP_VIEW = 22;
 	
 	public static final String HOME_VIEW_TITLE = "OpenUlmApp";
@@ -45,11 +43,10 @@ public final class Main extends MIDlet
 	
 	private InfoView infoView;
 
-	private Stack viewHistory;
 
 	public Main()
 	{
-		viewHistory = new Stack();
+
 		splashView = new SplashView(this);
 		
 
@@ -87,7 +84,7 @@ public final class Main extends MIDlet
 
 	public Displayable getView(int viewCode)
 	{
-//		System.out.println(viewCode);
+
 		switch(viewCode)
 		{
 			case HOME_VIEW: 				return homeView;
@@ -106,7 +103,7 @@ public final class Main extends MIDlet
 
 	public void setView(int viewCode)
 	{
-		addToViewHistory(viewCode);
+
 
 		Displayable view = getView(viewCode);
 
@@ -125,57 +122,6 @@ public final class Main extends MIDlet
 		}
 	}
 
-	public int getPreviousView()
-	{
-		if(viewHistory.size() > 1)
-		{
-			return ((Integer) viewHistory.elementAt(viewHistory.size() - 2)).intValue();
-		}
-		else
-		{
-			return HOME_VIEW;
-		}
-	}
-
-	public void goBack()
-	{
-		if(viewHistory.size() == 1)
-		{
-			setView(Main.HOME_VIEW);
-		}
-		else if(viewHistory.size() == 2)
-		{
-			setView(((Integer) viewHistory.elementAt(0)).intValue());
-		}
-		else if(viewHistory.size() == 3)
-		{
-			setView(((Integer) viewHistory.elementAt(1)).intValue());
-		}
-	}
-
-	private void addToViewHistory(int viewCode)
-	{
-		if(viewCode >= 1 && viewCode <= 4)
-		{
-			viewHistory.removeAllElements();
-			viewHistory.push(new Integer(viewCode));
-		}
-		else if(viewCode == 5)
-		{
-			if(viewHistory.size() == 1)
-			{
-				viewHistory.push(new Integer(viewCode));
-			}
-			else if(viewHistory.size() == 3)
-			{
-				viewHistory.pop();
-			}
-		}
-		else if(viewCode == 6)
-		{
-			viewHistory.push(new Integer(viewCode));
-		}
-	}
 
 	public Display getDisplay()
 	{

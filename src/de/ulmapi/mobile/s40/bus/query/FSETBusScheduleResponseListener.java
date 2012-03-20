@@ -14,8 +14,6 @@ public class FSETBusScheduleResponseListener implements BusScheduleResponseListe
 	private final BusScheduleCallback callback;
 	private final Vector results;
 
-	private final Stack currentElement = new Stack();
-
 	public FSETBusScheduleResponseListener(BusScheduleCallback callback)
 	{
 		this.callback = callback;
@@ -28,7 +26,6 @@ public class FSETBusScheduleResponseListener implements BusScheduleResponseListe
 		if(response.getStatusCode() == 200){
 			try {
 				JSONObject jsonObj = new JSONObject(new String(response.getEntity()));
-				System.out.println(jsonObj.toString());
 				JSONArray departures =  jsonObj.getJSONArray("departures");
 				for(int i = 0;i<departures.length();i++){
 					JSONObject departure = departures.getJSONObject(i);

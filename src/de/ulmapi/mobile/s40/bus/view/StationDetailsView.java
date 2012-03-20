@@ -82,7 +82,7 @@ public final class StationDetailsView extends Form implements CommandListener, R
 	{
 		if(c == screenCommand)
 		{
-			midlet.goBack();
+			midlet.setView(Main.STATION_LIST_VIEW);
 		}
 		else if(c == refreshCommand)
 		{

@@ -16,7 +16,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import de.ioexception.me.http.HttpResponse;
-import de.ioexception.me.http.HttpResponseListener;
 import de.ioexception.me.util.HtmlEntities;
 
 /**
