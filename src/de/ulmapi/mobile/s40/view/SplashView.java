@@ -8,8 +8,6 @@ import javax.microedition.lcdui.Image;
 
 import de.ulmapi.mobile.s40.Main;
 
-
-
 public class SplashView extends Canvas implements Runnable
 {
 	private final Main midlet;
