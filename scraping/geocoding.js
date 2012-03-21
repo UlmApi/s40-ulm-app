@@ -151,7 +151,6 @@ var parseDetails = function(fname, body) {
 			details[i][a] = details[i][a].replace(/\s+/gi, ' ');
 			details[i][a] = details[i][a].replace(/(<\/td><\/tr>)/gi, '');
 			details[i][a] = details[i][a].trim();
-			details[i][a] = details[i][a].replace(/:$/gi, '');
 
 			if (details[i][a].length > 0) empty = false;
 		}
@@ -173,6 +172,8 @@ var parseDetails = function(fname, body) {
 	console.log(JSON.stringify(detail) + '\n,\n');
 	//console.log(JSON.stringify(detail));
 }
+
+
 
 
 var decodeEntities = function(text) {
