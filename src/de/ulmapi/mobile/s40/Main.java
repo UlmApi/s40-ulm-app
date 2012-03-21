@@ -11,6 +11,7 @@ import de.ulmapi.mobile.s40.bus.view.StationMapView;
 import de.ulmapi.mobile.s40.view.DummyView;
 import de.ulmapi.mobile.s40.view.HomeView;
 import de.ulmapi.mobile.s40.view.InfoView;
+import de.ulmapi.mobile.s40.view.PostboxView;
 import de.ulmapi.mobile.s40.view.SplashView;
 import de.ulmapi.mobile.s40.view.gui.Refreshable;
 
@@ -24,6 +25,8 @@ public final class Main extends MIDlet
 	public static final int STATION_LIST_VIEW = 20;
 	public static final int STATION_DETAILS_VIEW = 21;
 	public static final int STATION_MAP_VIEW = 22;
+	
+	public static final int POSTBOX_VIEW = 30;
 	
 	public static final String HOME_VIEW_TITLE = "OpenUlmApp";
 	public static final String INFO_VIEW_TITLE = "Informationen";
@@ -42,6 +45,8 @@ public final class Main extends MIDlet
 	private StationMapView stationMapView; 
 	
 	private InfoView infoView;
+	
+	private PostboxView postboxView;
 
 
 	public Main()
@@ -67,6 +72,8 @@ public final class Main extends MIDlet
 			stationListView = new StationListView(this);
 			stationDetailsView = new StationDetailsView(this);
 			stationMapView = new StationMapView(this);
+			
+			postboxView = new PostboxView(this);
 		
 		}
 	}
@@ -97,6 +104,7 @@ public final class Main extends MIDlet
 			case STATION_DETAILS_VIEW: 		return stationDetailsView;
 			case STATION_MAP_VIEW:			return stationMapView;
 			
+			case POSTBOX_VIEW:				return postboxView;
 			default: 						return homeView;
 		}
 	}

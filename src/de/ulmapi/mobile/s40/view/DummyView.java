@@ -37,7 +37,7 @@ public final class DummyView extends Form implements CommandListener, ItemComman
 	private final Command deleteCommand;
 	private final Command choiceGrpClick;
 	
-	private final StringItem stringItem = new StringItem("", "");;
+	private final StringItem stringItem = new StringItem("", "");
 	
 	public DummyView(Main midlet) {
 		super(Main.DUMMY_VIEW_TITLE);
