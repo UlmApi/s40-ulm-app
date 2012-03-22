@@ -40,12 +40,12 @@ public final class HomeView extends Canvas implements CommandListener
 
 		setTitle(Main.HOME_VIEW_TITLE);
 
-		help2Command = new Command("Informationen", Command.HELP, 1);
+		//help2Command = new Command("Informationen", Command.HELP, 1);
 		itemCommand = new Command("OK", Command.ITEM, 1);
 		exitCommand = new Command("Ende", Command.EXIT, 1);
 
 		
-		addCommand(help2Command);
+		//addCommand(help2Command);
 		addCommand(itemCommand);
 		addCommand(exitCommand);
 		setCommandListener(this);
@@ -94,10 +94,10 @@ public final class HomeView extends Canvas implements CommandListener
 		{
 			g.fillRect(getWidth() / 2 + 1, 1, getWidth(), getHeight() / 2);
 		}
-//		else if(selected == Main.MAP_SEARCH_VIEW)
-//		{
-//			g.fillRect(0, getHeight() / 2 + 1, getWidth() / 2, getHeight());
-//		}
+		else if(selected == Main.OPENTIMES_VIEW)
+		{
+			g.fillRect(0, getHeight() / 2 + 1, getWidth() / 2, getHeight());
+		}
 //		else if(selected == Main.GEOCODING_SEARCH_VIEW)
 //		{
 //			g.fillRect(getWidth() / 2 + 1, getHeight() / 2 + 1, getWidth(), getHeight());
@@ -111,19 +111,20 @@ public final class HomeView extends Canvas implements CommandListener
 //		g.drawString(Main.FAVORITE_LIST_VIEW_TITLE, 180, 80, Graphics.HCENTER | Graphics.TOP);
 		
 		g.drawImage(imageMapSearchView, 60, 160, Graphics.HCENTER | Graphics.VCENTER);
-//		g.drawString(Main.MAP_SEARCH_VIEW_TITLE, 60, 200, Graphics.HCENTER | Graphics.TOP);
-		g.drawImage(imageGeocodingSearchView, 180, 160, Graphics.HCENTER | Graphics.VCENTER);
-//		g.drawString(Main.GEOCODING_SEARCH_VIEW_TITLE, 180, 200, Graphics.HCENTER | Graphics.TOP);
+		g.drawString(Main.OPENTIMES_VIEW_TITLE, 60, 200, Graphics.HCENTER | Graphics.TOP);
 		
+		g.drawImage(imageGeocodingSearchView, 180, 160, Graphics.HCENTER | Graphics.VCENTER);
+		g.drawString(Main.INFO_VIEW_TITLE, 180, 200, Graphics.HCENTER | Graphics.TOP);
 	}
 
 	public void commandAction(Command c, Displayable d)
 	{
-		if(c == help2Command)
+		/*if(c == help2Command)
 		{
 			midlet.setView(Main.INFO_VIEW);
 		}
-		else if(c == itemCommand)
+		else 
+		*/if(c == itemCommand)
 		{
 			pressedField = true;
 			repaint();
@@ -162,15 +163,16 @@ public final class HomeView extends Canvas implements CommandListener
 		}
 		else if(x <= getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
 		{
-//			selected = Main.MAP_SEARCH_VIEW;
-//			repaint();
-//			serviceRepaints();
-//			((MapSearchView) midlet.getView(selected)).isChangeOriginHome(true);
-//			midlet.setView(selected);
+			selected = Main.OPENTIMES_VIEW;
+			repaint();
+			serviceRepaints();
+			//((OpentimesView) midlet.getView(selected)).isChangeOriginHome(true);
+			midlet.setView(selected);
 		}
 		else if(x > getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
 		{
 //			selected = Main.GEOCODING_SEARCH_VIEW;
+			selected = Main.INFO_VIEW;
 			repaint();
 			serviceRepaints();
 			midlet.setView(selected);

@@ -59,7 +59,7 @@ public final class StationListView extends Form implements CommandListener, Item
 		setCommandListener(this);
 
 		setItemStateListener(this);
-		searchField = new TextField("", "", 64, TextField.ANY);
+		searchField = new TextField("Ihre Eingabe:", "", 64, TextField.ANY);
 		searchField.setItemCommandListener(this);
 		append(searchField);
 

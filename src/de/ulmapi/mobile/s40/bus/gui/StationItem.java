@@ -47,7 +47,7 @@ public class StationItem extends CustomItem
 
 	protected void paint(Graphics g, int w, int h)
 	{
-		g.setColor(0x2b80be);
+		g.setColor(0xb20000);
 		g.fillRect(0, 0, 40, 52);
 		g.fillRect(0, 0, 225, 2);
 
