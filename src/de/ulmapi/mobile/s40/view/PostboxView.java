@@ -34,8 +34,8 @@ public final class PostboxView extends MapCanvas implements CommandListener{
 //	private final Command deleteCommand;
 //	private final Command choiceGrpClick;
 	
-	private Vector postboxes = null;
-	private Wgs84Coordinate location = null;
+	private Vector postboxes;
+	private Wgs84Coordinate location;
 	
 	public PostboxView(Main midlet) {
 		super(Display.getDisplay(midlet));
@@ -107,20 +107,31 @@ public final class PostboxView extends MapCanvas implements CommandListener{
 		location = new Wgs84Coordinate(48.398494d, 9.994687d);
 		
 		//Datenbankabfrage, Postbox erstellen, in Vector adden
+		postboxes = new Vector();
 		postboxes.addElement(new Postbox("Am Rathaus", new Wgs84Coordinate(48.397494d, 9.994687d)));
 		postboxes.addElement(new Postbox("Hafengasse", new Wgs84Coordinate(48.398193d, 9.995957d)));
 		postboxes.addElement(new Postbox("Steinerne Bruecke", new Wgs84Coordinate(48.397186d, 9.987659d)));
+		System.err.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + postboxes.size() + " + " + postboxes.capacity());
 	}
 	
 	public void showPostboxes(){
 		Postbox postbox = (Postbox) postboxes.firstElement();
-		for (int i = 0; i < postboxes.size(); i++){
-			postbox = (Postbox) postboxes.elementAt(i);
-			MapStandardMarker marker = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.star);
-			map.addMapObject(marker);
-		}
-		map.setCenter(new GeoCoordinate(location.getLatitude(), location.getLongitude(),0));
+		System.err.println("after postbox");
+		 
+		MapStandardMarker marker2 = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.star);
+		map.addMapObject(marker2);
 		
+//		postbox = (Postbox) postboxes.lastElement();
+//		marker2 = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.car);
+//		map.addMapObject(marker2);
+		
+//		for (int i = 0; i < postboxes.size(); i++){
+////			postbox = (Postbox) postboxes.elementAt(i);
+////			MapStandardMarker marker = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.star);
+////			map.addMapObject(marker);
+//		}
+		map.setCenter(new GeoCoordinate(location.getLatitude(), location.getLongitude(),0));
+		map.setZoomLevel(15,0,0);
 		
 	}
 	
