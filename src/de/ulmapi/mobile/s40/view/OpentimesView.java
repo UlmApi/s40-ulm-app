@@ -32,6 +32,7 @@ import de.ioexception.me.http.HttpResponseListener;
 import de.ulmapi.mobile.s40.Main;
 import de.ulmapi.mobile.s40.bus.gui.HeadingItem;
 import de.ulmapi.mobile.s40.bus.gui.LineItem;
+import de.ulmapi.mobile.s40.bus.gui.LoadItem;
 import de.ulmapi.mobile.s40.bus.gui.OpentimesItem;
 import de.ulmapi.mobile.s40.bus.gui.StationItem;
 import de.ulmapi.mobile.s40.bus.gui.StationMapItem;
@@ -64,7 +65,7 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 		
 
 		addCommand(backCommand);
-		addCommand(okCommand);
+		//addCommand(okCommand);
 		addCommand(exitCommand);
 		setCommandListener(this);
 		setItemStateListener(this);
@@ -124,6 +125,7 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 
 
 	public void refresh() {
+		append(new LoadItem());
 		Calendar c = Calendar.getInstance();
 		//c.setTimeZone(TimeZone.getTimeZone("GMT"));
 		Date d = new Date();
