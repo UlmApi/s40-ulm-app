@@ -11,6 +11,7 @@ import de.ulmapi.mobile.s40.bus.view.StationMapView;
 import de.ulmapi.mobile.s40.view.DummyView;
 import de.ulmapi.mobile.s40.view.HomeView;
 import de.ulmapi.mobile.s40.view.InfoView;
+import de.ulmapi.mobile.s40.view.OpentimesView;
 import de.ulmapi.mobile.s40.view.PostboxView;
 import de.ulmapi.mobile.s40.view.SplashView;
 import de.ulmapi.mobile.s40.view.gui.Refreshable;
@@ -21,6 +22,7 @@ public final class Main extends MIDlet
 	public static final int INFO_VIEW = 2;
 
 	public static final int DUMMY_VIEW = 90;
+	public static final int OPENTIMES_VIEW = 70;
 
 	public static final int STATION_LIST_VIEW = 20;
 	public static final int STATION_DETAILS_VIEW = 21;
@@ -31,6 +33,7 @@ public final class Main extends MIDlet
 	public static final String HOME_VIEW_TITLE = "OpenUlmApp";
 	public static final String INFO_VIEW_TITLE = "Informationen";
 	public static final String DUMMY_VIEW_TITLE = "Abfahrtszeiten";
+	public static final String OPENTIMES_VIEW_TITLE = "Was hat offen?";
 	
 	public static final String STATION_LIST_VIEW_TITLE = "Haltestellen";
 	public static final String STATION_DETAILS_VIEW_TITLE = "Abfahrtszeiten";
@@ -47,6 +50,8 @@ public final class Main extends MIDlet
 	private InfoView infoView;
 	
 	private PostboxView postboxView;
+	
+	private OpentimesView opentimesView;
 
 
 	public Main()
@@ -74,7 +79,8 @@ public final class Main extends MIDlet
 			stationMapView = new StationMapView(this);
 			
 			postboxView = new PostboxView(this);
-		
+			
+			opentimesView = new OpentimesView(this);
 		}
 	}
 
@@ -105,6 +111,9 @@ public final class Main extends MIDlet
 			case STATION_MAP_VIEW:			return stationMapView;
 			
 			case POSTBOX_VIEW:				return postboxView;
+			
+			case OPENTIMES_VIEW:			return opentimesView;
+			
 			default: 						return homeView;
 		}
 	}
