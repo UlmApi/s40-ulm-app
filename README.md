@@ -1,6 +1,14 @@
 # Open Ulm App 
 
-tbd.
+This is an application for the Nokia Feature Phone Series. It was developed 
+within a week long hackathon at Nokia here in Ulm.
+
+We wanted to take use of some OpenData related sources and build an app that
+lets you comfortably access information on interesting city stuff.  
+
+ * local postboxes are displayed using data from the OpenStreetMaps project 
+ * local restaurants and bars that have opened right now are displayed
+ * the next bus and tram stations are displayed on a map
 
 
 # Icons used
@@ -10,6 +18,12 @@ John Caserta, http://thenounproject.com/noun/shopping-cart/#icon-No1230
 
 Letter Icon:  
 Tom Schott, http://thenounproject.com/noun/letter/#icon-No1209
+
+Information Icon:  
+Sven Hofmann, http://thenounproject.com/noun/information/#icon-No908
+
+Time Icon:  
+Infinity Kim, http://thenounproject.com/noun/clock/#icon-No1380
 
 
 # License
