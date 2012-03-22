@@ -155,6 +155,9 @@ public final class HomeView extends Canvas implements CommandListener
 			selected = Main.POSTBOX_VIEW;
 			repaint();
 			serviceRepaints();
+			PostboxView postboxView = (PostboxView) midlet.getView(Main.POSTBOX_VIEW);
+			postboxView.updatePostboxes();
+			postboxView.showPostboxes();
 			midlet.setView(selected);
 		}
 		else if(x <= getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
