@@ -5,6 +5,7 @@ var crypto = require('crypto');
 var credentials = require('./credentials.js');
 
 var json = fs.readFileSync('./restaurants_with_geo.json', 'utf8');
+var json = fs.readFileSync('./bars_with_geo.json', 'utf8');
 //var json = fs.readFileSync('./restaurants_test.json', 'utf8');
 var json = JSON.parse(json);
 

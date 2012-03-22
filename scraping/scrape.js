@@ -6,6 +6,7 @@ var fs = require('fs');
 var crypto = require('crypto');
 
 var facility = 'restaurant';
+var facility = 'bar';
 var days = ['mo', 'di', 'mi', 'do', 'fr', 'sa', 'so']
 
 var globalArray = []
@@ -13,6 +14,7 @@ var globalArray = []
 
 /* get the list of all the entries */
 var dummyCntList = fs.readFileSync('./Restaurants.html', 'utf8');
+var dummyCntList = fs.readFileSync('./Bars.html', 'utf8');
 var parseList = function(body) {
 	var allHrefs = body.match(urls.regex);
 	allHrefs.splice(0,1);
