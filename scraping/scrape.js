@@ -5,16 +5,20 @@ var request = require('request');
 var fs = require('fs');
 var crypto = require('crypto');
 
-var facility = 'restaurant';
-var facility = 'bar';
+var facility = 'club';
+//var facility = 'cafe';
+//var facility = 'restaurant';
+//var facility = 'bar';
 var days = ['mo', 'di', 'mi', 'do', 'fr', 'sa', 'so']
 
 var globalArray = []
 
 
 /* get the list of all the entries */
-var dummyCntList = fs.readFileSync('./Restaurants.html', 'utf8');
-var dummyCntList = fs.readFileSync('./Bars.html', 'utf8');
+var dummyCntList = fs.readFileSync('./Clubs.html', 'utf8');
+//var dummyCntList = fs.readFileSync('./Cafes.html', 'utf8');
+//var dummyCntList = fs.readFileSync('./Restaurants.html', 'utf8');
+//var dummyCntList = fs.readFileSync('./Bars.html', 'utf8');
 var parseList = function(body) {
 	var allHrefs = body.match(urls.regex);
 	allHrefs.splice(0,1);
@@ -30,9 +34,14 @@ var parseList = function(body) {
 	}
 
 	//console.log('starting to scrape ' + allHrefs.length + ' entries');
-	//getDetailsFromFile(allHrefs[0]);
+	//getDetailsFromFile('some url...');
+	
+	/* every website is saved locally, use this to read from the local copies */
 	for (var i in allHrefs) getDetailsFromFile(allHrefs[i]);
+
+	/* for scraping from the website */
 	//for (var i in allHrefs) getDetails(allHrefs[i]);
+	
 	//console.log(allHrefs);
 }
 
@@ -131,31 +140,34 @@ var parseDetails = function(fname, body) {
 
 
 	/* matching auf die besonderheiten */
-	pos_start = body.match(/(<strong>Besonderheiten:<\/strong>)/);
-	var details = body.substring(pos_start.index);
-	pos_end = details.match(/(<\/table>)/);
-	details = details.substr(0, pos_end.index);
+	var details = undefined;
+	if (!body.search('<p style="padding:0px; margin-left:15px; margin-top:4px;">keine</p>')) {
+		pos_start = body.search(/(<strong>Besonderheiten:<\/strong>)/);
+		details = body.substring(pos_start.index);
+		pos_end = details.match(/(<\/table>)/);
+		details = details.substr(0, pos_end.index);
 
-	/* alles bis zum ersten <tr> rausloesche */
-	pos_start = details.match(/<tr>/);
-	details = details.substr(pos_start.index + 4); /* +4 to eliminate the first <tr> */
-	details = details.split(/<tr>/);
+		/* alles bis zum ersten <tr> rausloesche */
+		pos_start = details.match(/<tr>/);
+		details = details.substr(pos_start.index + 4); /* +4 to eliminate the first <tr> */
+		details = details.split(/<tr>/);
 
-	for (var i in details) {
-		details[i] = details[i].replace('<td valign="top">', '');
-		details[i] = details[i].replace(/&nbsp;/gi, ' ');
-		details[i] = details[i].trim();
-		details[i] = details[i].split(/(<\/td><td>)/);
-		details[i].splice(1,1);
-		
-		empty = true;
-		for (var a in details[i]) {
-			details[i][a] = details[i][a].replace(/\s+/gi, ' ');
-			details[i][a] = details[i][a].replace(/(<\/td><\/tr>)/gi, '');
-			details[i][a] = details[i][a].trim();
-			details[i][a] = details[i][a].replace(/:$/gi, '');
+		for (var i in details) {
+			details[i] = details[i].replace('<td valign="top">', '');
+			details[i] = details[i].replace(/&nbsp;/gi, ' ');
+			details[i] = details[i].trim();
+			details[i] = details[i].split(/(<\/td><td>)/);
+			details[i].splice(1,1);
+			
+			empty = true;
+			for (var a in details[i]) {
+				details[i][a] = details[i][a].replace(/\s+/gi, ' ');
+				details[i][a] = details[i][a].replace(/(<\/td><\/tr>)/gi, '');
+				details[i][a] = details[i][a].trim();
+				details[i][a] = details[i][a].replace(/:$/gi, '');
 
-			if (details[i][a].length > 0) empty = false;
+				if (details[i][a].length > 0) empty = false;
+			}
 		}
 	}
 
@@ -166,7 +178,7 @@ var parseDetails = function(fname, body) {
 		, '_id' : fname.replace('.html','')
 		, 'facility' : facility
 		, 'address' : address
-		, 'details' : details
+		//, 'details' : details
 		, 'open' : opentimes
 	}
 
