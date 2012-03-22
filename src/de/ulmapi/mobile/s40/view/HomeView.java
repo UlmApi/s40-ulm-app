@@ -12,6 +12,7 @@ import javax.microedition.lcdui.Image;
 
 import de.ulmapi.mobile.s40.Main;
 
+
 public final class HomeView extends Canvas implements CommandListener
 {
 	private final Main midlet;
@@ -22,6 +23,7 @@ public final class HomeView extends Canvas implements CommandListener
 	private Image imageFavoriteListView;
 	private Image imageMapSearchView;
 	private Image imageGeocodingSearchView;
+	private Image imagePostboxView;
 
 
 	private Command help2Command;
@@ -48,7 +50,7 @@ public final class HomeView extends Canvas implements CommandListener
 		addCommand(exitCommand);
 		setCommandListener(this);
 
-		selected = Main.DUMMY_VIEW;
+		selected = Main.STATION_LIST_VIEW;
 
 		try
 		{
@@ -56,6 +58,7 @@ public final class HomeView extends Canvas implements CommandListener
 			imageFavoriteListView = Image.createImage("/favoriteListView.png");
 			imageMapSearchView = Image.createImage("/mapSearchView.png");
 			imageGeocodingSearchView = Image.createImage("/geocodingSearchView.png");
+			imagePostboxView = imageFavoriteListView;
 		}
 		catch(IOException e)
 		{
@@ -80,15 +83,17 @@ public final class HomeView extends Canvas implements CommandListener
 			pressedField = false;
 			g.setColor(0xBCBCBC);
 		}
+		
+		//TODO: fix menu rendering when menu is final
 
-		if(selected == Main.DUMMY_VIEW)
+		if(selected == Main.STATION_LIST_VIEW)
 		{
 			g.fillRect(0, 1, getWidth() / 2, getHeight() / 2);
 		}
-//		else if(selected == Main.FAVORITE_LIST_VIEW)
-//		{
-//			g.fillRect(getWidth() / 2 + 1, 1, getWidth(), getHeight() / 2);
-//		}
+		else if(selected == Main.POSTBOX_VIEW)
+		{
+			g.fillRect(getWidth() / 2 + 1, 1, getWidth(), getHeight() / 2);
+		}
 //		else if(selected == Main.MAP_SEARCH_VIEW)
 //		{
 //			g.fillRect(0, getHeight() / 2 + 1, getWidth() / 2, getHeight());
@@ -101,8 +106,8 @@ public final class HomeView extends Canvas implements CommandListener
 		g.setColor(0x000000);
 		g.setFont(Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, Font.SIZE_SMALL));
 		g.drawImage(imageStationListView, 60, 40, Graphics.HCENTER | Graphics.VCENTER);
-		g.drawString(Main.DUMMY_VIEW_TITLE, 60, 80, Graphics.HCENTER | Graphics.TOP);
-		g.drawImage(imageFavoriteListView, 180, 40, Graphics.HCENTER | Graphics.VCENTER);
+		g.drawString(Main.STATION_LIST_VIEW_TITLE, 60, 80, Graphics.HCENTER | Graphics.TOP);
+		g.drawImage(imagePostboxView, 180, 40, Graphics.HCENTER | Graphics.VCENTER);
 //		g.drawString(Main.FAVORITE_LIST_VIEW_TITLE, 180, 80, Graphics.HCENTER | Graphics.TOP);
 		
 		g.drawImage(imageMapSearchView, 60, 160, Graphics.HCENTER | Graphics.VCENTER);
@@ -134,18 +139,20 @@ public final class HomeView extends Canvas implements CommandListener
 
 	public void pointerPressed(int x, int y)
 	{
+		//TODO: fix touch navigation when navigation is final
+		
 		pressedField = true;
 
 		if(x <= getWidth() / 2 && y > 0 && y <= getHeight() / 2)
 		{
-			selected = Main.DUMMY_VIEW;
+			selected = Main.STATION_LIST_VIEW;
 			repaint();
 			serviceRepaints();
 			midlet.setView(selected);
 		}
 		else if(x > getWidth() / 2 && y > 0 && y <= getHeight() / 2)
 		{
-//			selected = Main.FAVORITE_LIST_VIEW;
+			selected = Main.POSTBOX_VIEW;
 			repaint();
 			serviceRepaints();
 			midlet.setView(selected);
@@ -169,6 +176,8 @@ public final class HomeView extends Canvas implements CommandListener
 
 	public void keyPressed(int keyCode)
 	{
+		//TODO: fix keypad navigation when menu is final
+		
 		if(keyCode == Canvas.KEY_NUM5 || keyCode == Canvas.FIRE)
 		{
 			pressedField = true;

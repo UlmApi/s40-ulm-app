@@ -1,5 +1,7 @@
 package de.ulmapi.mobile.s40.view;
 
+import java.util.Random;
+
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
@@ -35,7 +37,7 @@ public final class DummyView extends Form implements CommandListener, ItemComman
 	private final Command deleteCommand;
 	private final Command choiceGrpClick;
 	
-	private final StringItem stringItem = new StringItem("", "");;
+	private final StringItem stringItem = new StringItem("", "");
 	
 	public DummyView(Main midlet) {
 		super(Main.DUMMY_VIEW_TITLE);
@@ -71,16 +73,23 @@ public final class DummyView extends Form implements CommandListener, ItemComman
 //			CanvasList myCanvas = new CanvasList("Test canvas", items, imgs);
 			List list = new List("foo", List.IMPLICIT, items, imgs);
 //			Display.getDisplay(midlet).setCurrent(list);	
-			
-			Display display = Display.getDisplay(midlet);
-	        MapCanvas mapCanvas = new MapCanvas( display  );
-	        display.setCurrent(mapCanvas);
-	        
-	        mapCanvas.getMapDisplay().addMapObject(mapCanvas.getMapFactory().createStandardMarker(new GeoCoordinate(49, 10, 0), 10, "test", MapShapeType.baloon));
-			
-			GeoCoordinate coord = new GeoCoordinate( 10, 10, 0 ); 
-			
-			Display.getDisplay(midlet).setCurrent(mapCanvas);
+//			
+////			Display display = Display.getDisplay(midlet);
+////	        MapCanvas mapCanvas = new MapCanvas( display  );
+////	        display.setCurrent(mapCanvas);
+//	        
+//	        Random r = new Random();
+//	        for(int i = 0;i<10;i++){
+//	        	
+//		        mapCanvas.getMapDisplay().addMapObject(mapCanvas.getMapFactory().createStandardMarker(new GeoCoordinate(49f+(r.nextFloat()*0.1), 10f+r.nextFloat()*0.1, 0), 10, "test"+i, MapShapeType.star));
+//	        }
+//	        
+//	        mapCanvas.getMapDisplay().setCenter(new GeoCoordinate(48.7f, 9.7f, 0));
+//	        mapCanvas.getMapDisplay().setZoomLevel(10,0,0);
+//			
+//			GeoCoordinate coord = new GeoCoordinate( 10, 10, 0 ); 
+//			
+////			Display.getDisplay(midlet).setCurrent(mapCanvas);
 		}
 		catch (Exception e) {
 			// TODO: handle exception
@@ -107,7 +116,7 @@ public final class DummyView extends Form implements CommandListener, ItemComman
 	{
 		if(c == backCommand)
 		{
-			midlet.goBack();
+			midlet.setView(Main.HOME_VIEW);
 		}
 		else if(c == okCommand)
 		{

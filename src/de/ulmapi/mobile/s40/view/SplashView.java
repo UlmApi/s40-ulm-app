@@ -8,8 +8,6 @@ import javax.microedition.lcdui.Image;
 
 import de.ulmapi.mobile.s40.Main;
 
-
-
 public class SplashView extends Canvas implements Runnable
 {
 	private final Main midlet;
@@ -64,7 +62,8 @@ public class SplashView extends Canvas implements Runnable
 	{
 		try
 		{
-			Thread.sleep(4000);
+			//TODO: set to 4000
+			Thread.sleep(400);
 		}
 		catch(InterruptedException e)
 		{
