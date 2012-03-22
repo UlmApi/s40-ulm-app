@@ -202,7 +202,7 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 	    }
 	}
 	
-	protected static final int MAX_RESULTS = 10;
+	protected static final int MAX_RESULTS = 25;
 
 	private StationMapItem stationMapItem = null;
 	private Vector stationItems = new Vector();

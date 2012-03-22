@@ -54,9 +54,6 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 //		exitCommand = new Command("Ende", Command.EXIT, 1);
 //		deleteCommand = new Command("Löschen", Command.EXIT, 1);
 //		choiceGrpClick = new Command("OK", Command.SCREEN, 1);
-		
-	
-		
 
 		addCommand(backCommand);
 //		addCommand(okCommand);
@@ -72,81 +69,10 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 		{
 			midlet.setView(Main.HOME_VIEW);
 		}
-//		else if(c == okCommand)
-//		{
-//			HttpManager http = HttpManager.getInstance();
-//			http.get("http://daten.ulmapi.de/plz/89231", new HttpResponseListener() {
-//				
-//				public void responseReceived(HttpResponse response) {
-//					if(response.getStatusCode() == 200){
-//						
-//						JSONObject json;
-//						try {
-//							json = new JSONObject(new String(response.getEntity()));
-//							String s = json.get("_id").toString();
-//							stringItem.setLabel(s);
-//							stringItem.setText(s);
-//							System.out.println(json.toString());
-//						} catch (JSONException e) {
-//							// TODO Auto-generated catch block
-//							e.printStackTrace();
-//						}
-//						
-//					}
-//					
-//				}
-//			});
-//			gotoStationList();
-//		}
-//		else if(c == deleteCommand)
-//		{
-////			removeFavorite(getSelectedStation());
-//		}
-//		else if(c == exitCommand)
-//		{
-//			midlet.destroyApp(false);
-//			midlet.notifyDestroyed();
-//		}
-	}
-	
-	public void updatePostboxes(){
-		/*
-		//Aktueller Standort oder Standardkoordinaten
-		location = new Wgs84Coordinate(48.398494d, 9.994687d);
-		
-		//Datenbankabfrage, Postbox erstellen, in Vector adden
-		postboxes = new Vector();
-		postboxes.addElement(new Postbox("Am Rathaus", new Wgs84Coordinate(48.397494d, 9.994687d)));
-		postboxes.addElement(new Postbox("Hafengasse", new Wgs84Coordinate(48.398193d, 9.995957d)));
-		postboxes.addElement(new Postbox("Steinerne Bruecke", new Wgs84Coordinate(48.397186d, 9.987659d)));
-		System.err.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + postboxes.size() + " + " + postboxes.capacity());
-		*/
-	}
-	
-	public void showPostboxes(){
-		/*
-		Postbox postbox = (Postbox) postboxes.firstElement();
-		System.err.println("after postbox");
-		 
-		MapStandardMarker marker2 = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.star);
-		map.addMapObject(marker2);
-		
-//		postbox = (Postbox) postboxes.lastElement();
-//		marker2 = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.car);
-//		map.addMapObject(marker2);
-		
-//		for (int i = 0; i < postboxes.size(); i++){
-////			postbox = (Postbox) postboxes.elementAt(i);
-////			MapStandardMarker marker = mapFactory.createStandardMarker(new GeoCoordinate(postbox.getPosition().getLatitude(), postbox.getPosition().getLongitude(), 0), 12, postbox.getName(), MapShapeType.star);
-////			map.addMapObject(marker);
-//		}
-		map.setCenter(new GeoCoordinate(location.getLatitude(), location.getLongitude(),0));
-		map.setZoomLevel(15,0,0);
-		*/
 	}
 	
 	
-	protected static final int MAX_RESULTS = 10;
+	protected static final int MAX_RESULTS = 15;
 
 	private StationMapItem stationMapItem = null;
 	private Vector postboxItems = new Vector();
