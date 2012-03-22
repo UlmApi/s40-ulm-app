@@ -90,9 +90,11 @@ public final class StationDetailsView extends Form implements CommandListener, R
 		}
 		else if(c == showMapCommand)
 		{
+/*			
 			StationMapView stationMapView = (StationMapView) midlet.getView(Main.STATION_MAP_VIEW);
 			stationMapView.updateStation(currentStation);
 			midlet.setView(Main.STATION_MAP_VIEW);
+			*/
 		}
 		else if(c == exitCommand)
 		{

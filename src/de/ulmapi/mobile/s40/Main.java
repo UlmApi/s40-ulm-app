@@ -51,8 +51,8 @@ public final class Main extends MIDlet
 	
 	private InfoView infoView;
 	
-	//private PostboxView postboxView;
-	private PostkastenView postboxView;
+	private PostboxView postboxView;
+	//private PostkastenView postboxView;
 	
 	private OpentimesView opentimesView;
 
@@ -79,10 +79,10 @@ public final class Main extends MIDlet
 
 			stationListView = new StationListView(this);
 			stationDetailsView = new StationDetailsView(this);
-			stationMapView = new StationMapView(this);
+			//stationMapView = new StationMapView(this);
 			
-			//postboxView = new PostboxView(this);
-			postboxView = new PostkastenView(this);
+			postboxView = new PostboxView(this);
+			//postboxView = new PostkastenView(this);
 			
 			opentimesView = new OpentimesView(this);
 		}
