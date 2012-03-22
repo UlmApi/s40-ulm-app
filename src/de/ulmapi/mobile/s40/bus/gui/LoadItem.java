@@ -39,7 +39,7 @@ public class LoadItem extends CustomItem
 
 	protected void paint(Graphics g, int w, int h)
 	{
-		g.setColor(0x2b80be);
+		g.setColor(0xb20000);
 		g.fillRect(0, 45, 225, 60);
 
 		g.setFont(Font.getFont(Font.FACE_SYSTEM, Font.STYLE_BOLD, Font.SIZE_LARGE));
