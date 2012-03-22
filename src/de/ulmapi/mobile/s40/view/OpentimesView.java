@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 import java.util.TimeZone;
+import java.util.Vector;
 
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -17,6 +18,7 @@ import javax.microedition.lcdui.ItemStateListener;
 import javax.microedition.lcdui.List;
 import javax.microedition.lcdui.StringItem;
 
+import org.json.me.JSONArray;
 import org.json.me.JSONException;
 import org.json.me.JSONObject;
 
@@ -28,6 +30,11 @@ import de.ioexception.me.http.HttpManager;
 import de.ioexception.me.http.HttpResponse;
 import de.ioexception.me.http.HttpResponseListener;
 import de.ulmapi.mobile.s40.Main;
+import de.ulmapi.mobile.s40.bus.gui.HeadingItem;
+import de.ulmapi.mobile.s40.bus.gui.LineItem;
+import de.ulmapi.mobile.s40.bus.gui.OpentimesItem;
+import de.ulmapi.mobile.s40.bus.gui.StationItem;
+import de.ulmapi.mobile.s40.bus.gui.StationMapItem;
 import de.ulmapi.mobile.s40.view.gui.Refreshable;
 
 
@@ -137,15 +144,37 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 			public void responseReceived(HttpResponse response) {
 				if(response.getStatusCode() == 200){
 					
+		final Vector resultList = stationItems;
 					JSONObject json;
 					try {
 						json = new JSONObject(new String(response.getEntity()));
+						JSONArray foo = (JSONArray) json.get("rows");
+						System.out.println("length: " + foo.length());
+						
+						for (int i = 0; i < MAX_RESULTS; i++) {
+						//for (int i = 0; i < foo.length(); i++) {
+							JSONObject bar = (JSONObject) foo.get(i);
+							JSONObject foobar = (JSONObject) bar.get("value");
+							JSONObject address = (JSONObject) foobar.get("address");
+							System.out.println(foobar.get("name"));
+							String name = (String) foobar.getString("name");
+							name = replace("&eacute;", "é", name);
+
+							String www = "";
+							String tel = "";
+							if (address.has("www")) www = (String) address.getString("www");
+							if (address.has("tel")) tel = (String) address.getString("tel");
+									
+							stationItems.addElement(new OpentimesItem(name,
+									(String) address.get("street"), (String) address.get("plz"), www, tel ));
+						}
+						showResults();
 						
 						
 						//String s = json.get("_id").toString();
 						//stringItem.setLabel(s);
 						//stringItem.setText(s);
-						System.out.println(json.toString());
+						//System.out.println(json.toString());
 					} catch (JSONException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -156,6 +185,77 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 			}
 		});
 	}
+	
+	private String replace(String needle, String replacement, String haystack) {
+	    String result = "";
+	    int index = haystack.indexOf(needle);
+	    if(index==0) {
+	        result = replacement+haystack.substring(needle.length());
+	        return replace(needle, replacement, result);
+	    }else if(index>0) {
+	        result = haystack.substring(0,index)+ replacement +haystack.substring(index+needle.length());
+	        return replace(needle, replacement, result);
+	    }else {
+	        return haystack;
+	    }
+	}
+	
+	protected static final int MAX_RESULTS = 10;
+
+	private StationMapItem stationMapItem = null;
+	private Vector stationItems = new Vector();
+
+	private LineItem noResultItem = null;
+	private HeadingItem headingItem = null;
+
+	private void showResults()
+	{
+		final Vector resultList = stationItems;
+		final HeadingItem header = headingItem;
+		final Form that = this;
+		final LineItem noResults = noResultItem;
+		final StationMapItem mapItem = stationMapItem;
+
+		Display d = Display.getDisplay(midlet);
+		
+		d.callSerially(new Runnable()
+		{
+			public void run()
+			{
+				that.deleteAll();
+				
+				if(header != null)
+				{
+					that.append(header);
+				}
+
+				if(mapItem != null)
+				{
+					that.append(mapItem);
+				}
+
+				if(resultList != null && resultList.size() > 0)
+				{
+					int maxSize = resultList.size();
+					
+					if(maxSize > MAX_RESULTS)
+					{
+						maxSize = MAX_RESULTS;
+					}
+
+					for(int i = 0; i < maxSize; i++)
+					{
+						that.append((Item) resultList.elementAt(i));
+					}
+				}
+				else
+				{
+					that.append(noResults);
+				}
+			}
+		});
+	}
+
 	
 	public void commandAction(Command c, Displayable d)
 	{
