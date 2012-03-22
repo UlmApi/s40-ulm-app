@@ -1,6 +1,9 @@
 package de.ulmapi.mobile.s40.view;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
+import java.util.TimeZone;
 
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -25,9 +28,10 @@ import de.ioexception.me.http.HttpManager;
 import de.ioexception.me.http.HttpResponse;
 import de.ioexception.me.http.HttpResponseListener;
 import de.ulmapi.mobile.s40.Main;
+import de.ulmapi.mobile.s40.view.gui.Refreshable;
 
 
-public final class OpentimesView extends Form implements CommandListener, ItemCommandListener, ItemStateListener{
+public final class OpentimesView extends Form implements CommandListener, ItemCommandListener, ItemStateListener, Refreshable {
 
 	private final Main midlet;
 
@@ -59,6 +63,8 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 		setItemStateListener(this);
 		
 		append(stringItem);
+		
+		//getCurrentWeekday();
 		
 //		zr
 //		String[] strings = {"a","b"};
@@ -110,7 +116,47 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 	}
 
 
-
+	public void refresh() {
+		Calendar c = Calendar.getInstance();
+		//c.setTimeZone(TimeZone.getTimeZone("GMT"));
+		Date d = new Date();
+		c.setTime(d);
+		
+		int weekDay = c.get(Calendar.DAY_OF_WEEK);
+		int hour = c.get(Calendar.HOUR_OF_DAY);
+		
+		System.out.println(hour);	
+		System.out.println(d.getTime());	
+		hour += ((weekDay-1)*24);
+		String url = "http://daten.ulmapi.de/oeffnungszeiten/_design/oeffnungszeiten/_spatial/open?bbox=0,"+hour+",0,"+hour;
+		System.out.println(url);	
+		
+		HttpManager http = HttpManager.getInstance();
+		http.get(url, new HttpResponseListener() {
+			
+			public void responseReceived(HttpResponse response) {
+				if(response.getStatusCode() == 200){
+					
+					JSONObject json;
+					try {
+						json = new JSONObject(new String(response.getEntity()));
+						
+						
+						//String s = json.get("_id").toString();
+						//stringItem.setLabel(s);
+						//stringItem.setText(s);
+						System.out.println(json.toString());
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				}
+				
+			}
+		});
+	}
+	
 	public void commandAction(Command c, Displayable d)
 	{
 		if(c == backCommand)
