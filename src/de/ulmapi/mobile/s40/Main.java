@@ -34,6 +34,7 @@ public final class Main extends MIDlet
 	public static final String INFO_VIEW_TITLE = "Informationen";
 	public static final String DUMMY_VIEW_TITLE = "Abfahrtszeiten";
 	public static final String OPENTIMES_VIEW_TITLE = "Was hat offen?";
+	public static final String POSTBOX_VIEW_TITLE = "Postkästen";
 	
 	public static final String STATION_LIST_VIEW_TITLE = "Haltestellen";
 	public static final String STATION_DETAILS_VIEW_TITLE = "Abfahrtszeiten";

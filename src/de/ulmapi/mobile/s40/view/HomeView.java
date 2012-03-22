@@ -107,8 +107,9 @@ public final class HomeView extends Canvas implements CommandListener
 		g.setFont(Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, Font.SIZE_SMALL));
 		g.drawImage(imageStationListView, 60, 40, Graphics.HCENTER | Graphics.VCENTER);
 		g.drawString(Main.STATION_LIST_VIEW_TITLE, 60, 80, Graphics.HCENTER | Graphics.TOP);
+		
 		g.drawImage(imagePostboxView, 180, 40, Graphics.HCENTER | Graphics.VCENTER);
-//		g.drawString(Main.FAVORITE_LIST_VIEW_TITLE, 180, 80, Graphics.HCENTER | Graphics.TOP);
+		g.drawString(Main.POSTBOX_VIEW_TITLE, 180, 80, Graphics.HCENTER | Graphics.TOP);
 		
 		g.drawImage(imageMapSearchView, 60, 160, Graphics.HCENTER | Graphics.VCENTER);
 		g.drawString(Main.OPENTIMES_VIEW_TITLE, 60, 200, Graphics.HCENTER | Graphics.TOP);
