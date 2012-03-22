@@ -8,6 +8,7 @@ import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
 import javax.microedition.lcdui.Displayable;
 
+import org.json.me.JSONArray;
 import org.json.me.JSONException;
 import org.json.me.JSONObject;
 
@@ -20,6 +21,11 @@ import de.ioexception.me.http.HttpManager;
 import de.ioexception.me.http.HttpResponse;
 import de.ioexception.me.http.HttpResponseListener;
 import de.ioexception.me.util.Wgs84Coordinate;
+import de.ulmapi.mobile.s40.bus.gui.HeadingItem;
+import de.ulmapi.mobile.s40.bus.gui.LineItem;
+import de.ulmapi.mobile.s40.bus.gui.LoadItem;
+import de.ulmapi.mobile.s40.bus.gui.PostkastenItem;
+import de.ulmapi.mobile.s40.bus.gui.StationMapItem;
 import de.ulmapi.mobile.s40.postbox.data.*;
 import de.ulmapi.mobile.s40.Main;
 import de.ulmapi.mobile.s40.view.gui.Refreshable;
@@ -137,25 +143,86 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 		map.setCenter(new GeoCoordinate(location.getLatitude(), location.getLongitude(),0));
 		map.setZoomLevel(15,0,0);
 		*/
-		
 	}
 	
 	
-	
+	protected static final int MAX_RESULTS = 10;
+
+	private StationMapItem stationMapItem = null;
+	private Vector postboxItems = new Vector();
+
+	private LineItem noResultItem = null;
+	private HeadingItem headingItem = null;
+
 	private MapStandardMarker marker = null;
 	public void refresh() {
-		location = new Wgs84Coordinate(48.398494d, 9.994687d);
-		marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
-		map.addMapObject(marker);
+		//append(new LoadItem());
+
+		String url = "http://daten.ulmapi.de/postkaesten/_all_docs?include_docs=true";
+		HttpManager http = HttpManager.getInstance();
+		http.get(url, new HttpResponseListener() {
+			
+		public void responseReceived(HttpResponse response) {
+			if(response.getStatusCode() == 200){
+				final Vector resultList = postboxItems;
+					JSONObject json;
+					try {
+						json = new JSONObject(new String(response.getEntity()));
+						JSONArray foo = (JSONArray) json.get("rows");
+						//System.out.println("length: " + foo.length());
+						
+						for (int i = 0; i < MAX_RESULTS; i++) {
+						//for (int i = 0; i < foo.length(); i++) {
+							JSONObject bar = (JSONObject) foo.get(i);
+							JSONObject foobar = (JSONObject) bar.get("doc");
+							String name = "";
+							
+							if (foobar.has("name"))
+								name += (String) foobar.getString("name") + "\n" ;
+
+							if (foobar.has("description"))
+								name += (String) foobar.getString("description") + "\n" ;
+
+							if (foobar.has("ref"))
+								name += (String) foobar.getString("ref") + "\n" ;
+
+							postboxItems.addElement(new PostkastenItem(name));
+							
+							location = new Wgs84Coordinate(Double.parseDouble(foobar.getString("lat")), Double.parseDouble(foobar.getString("lon"))) ;
+							marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "", MapShapeType.rectangle);
+							//marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
+							map.addMapObject(marker);
+							System.out.println("added " + location.getLatitude() + ", " + location.getLongitude());
+									//(String) address.get("street"), (String) address.get("plz"), www, tel ));
+						}
+						//showResults();
+						
+						
+						//String s = json.get("_id").toString();
+						//stringItem.setLabel(s);
+						//stringItem.setText(s);
+						//System.out.println(json.toString());
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				}
+				
+			}
+		});
 		
-		location = new Wgs84Coordinate(48.3949985d, 10.001052100000001d);
+		
+		/*
+		
 		marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
 		map.addMapObject(marker);
 		
 		location = new Wgs84Coordinate(48.343074899999998d, 10.0352812d);
 		marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
 		map.addMapObject(marker);
-		
+		*/
+		location = new Wgs84Coordinate(48.3949985d, 10.001052100000001d);
 		map.setCenter(new GeoCoordinate(location.getLatitude(), location.getLongitude(),0));
 		map.setZoomLevel(15,0,0);	
 	}

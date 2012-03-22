@@ -66,7 +66,7 @@ public final class StationDetailsView extends Form implements CommandListener, R
 		exitCommand = new Command("Ende", Command.EXIT, 1);
 
 		addCommand(screenCommand);
-		addCommand(showMapCommand);
+		//addCommand(showMapCommand);
 		addCommand(refreshCommand);
 		addCommand(exitCommand);
 		setCommandListener(this);
