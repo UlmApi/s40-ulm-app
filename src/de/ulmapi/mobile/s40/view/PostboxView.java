@@ -7,6 +7,7 @@ import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
 import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.Image;
 
 import org.json.me.JSONArray;
 import org.json.me.JSONException;
@@ -14,6 +15,7 @@ import org.json.me.JSONObject;
 
 import com.nokia.maps.common.GeoCoordinate;
 import com.nokia.maps.map.MapCanvas;
+import com.nokia.maps.map.MapMarker;
 import com.nokia.maps.map.MapShapeType;
 import com.nokia.maps.map.MapStandardMarker;
 
@@ -42,14 +44,16 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 //	private final Command choiceGrpClick;
 	
 	private Vector postboxes;
-	private Wgs84Coordinate location;
+	private Wgs84Coordinate postboxCoordinate;
+	private Wgs84Coordinate myLocation;
+	Image myMapShape;
 	
 	public PostboxView(Main midlet) {
 		super(Display.getDisplay(midlet));
 
 		this.midlet = midlet;
 
-		backCommand = new Command("Zurück", Command.SCREEN, 1);
+		backCommand = new Command("Zurück", Command.BACK, 1);
 //		okCommand = new Command("OK", Command.ITEM, 1);
 //		exitCommand = new Command("Ende", Command.EXIT, 1);
 //		deleteCommand = new Command("Löschen", Command.EXIT, 1);
@@ -59,6 +63,12 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 //		addCommand(okCommand);
 //		addCommand(exitCommand);
 		setCommandListener(this);
+		
+		try {
+			myMapShape = Image.createImage("/brief.png");
+		} catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 		
 
@@ -72,7 +82,7 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 	}
 	
 	
-	protected static final int MAX_RESULTS = 40;
+	protected static final int MAX_RESULTS = 200;
 
 	private StationMapItem stationMapItem = null;
 	private Vector postboxItems = new Vector();
@@ -81,6 +91,7 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 	private HeadingItem headingItem = null;
 
 	private MapStandardMarker marker = null;
+	private MapMarker myMarker = null;
 	public void refresh() {
 		//append(new LoadItem());
 
@@ -114,12 +125,12 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 
 							postboxItems.addElement(new PostkastenItem(name));
 							
-							location = new Wgs84Coordinate(Double.parseDouble(foobar.getString("lat")), Double.parseDouble(foobar.getString("lon"))) ;
-							marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "", MapShapeType.rectangle);
-							
-							//marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
-							map.addMapObject(marker);
-							System.out.println("added " + location.getLatitude() + ", " + location.getLongitude());
+							postboxCoordinate = new Wgs84Coordinate(Double.parseDouble(foobar.getString("lat")), Double.parseDouble(foobar.getString("lon"))) ;
+//							marker = mapFactory.createStandardMarker(new GeoCoordinate(postboxCoordinate.getLatitude(), postboxCoordinate.getLongitude(), 0), 12, "", MapShapeType.rectangle);
+							myMarker = mapFactory.createMapMarker(new GeoCoordinate(postboxCoordinate.getLatitude(), postboxCoordinate.getLongitude(), 0), myMapShape);
+//							marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
+							map.addMapObject(myMarker);
+							System.out.println("added " + postboxCoordinate.getLatitude() + ", " + postboxCoordinate.getLongitude());
 									//(String) address.get("street"), (String) address.get("plz"), www, tel ));
 						}
 						//showResults();
@@ -149,8 +160,8 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 		marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
 		map.addMapObject(marker);
 		*/
-		location = new Wgs84Coordinate(48.3949985d, 10.001052100000001d);
-		map.setCenter(new GeoCoordinate(location.getLatitude(), location.getLongitude(),0));
+		myLocation = new Wgs84Coordinate(48.3949985d, 10.001052100000001d);
+		map.setCenter(new GeoCoordinate(myLocation.getLatitude(), myLocation.getLongitude(),0));
 		map.setZoomLevel(15,0,0);	
 	}
 	

@@ -20,7 +20,7 @@ public final class HomeView extends Canvas implements CommandListener
 	private int selected;
 
 	private Image imageStationListView;
-	private Image imageFavoriteListView;
+//	private Image imageFavoriteListView;
 	private Image imageMapSearchView;
 	private Image imageGeocodingSearchView;
 	private Image imagePostboxView;
@@ -55,10 +55,10 @@ public final class HomeView extends Canvas implements CommandListener
 		try
 		{
 			imageStationListView = Image.createImage("/stationListView.png");
-			imageFavoriteListView = Image.createImage("/favoriteListView.png");
+//			imageFavoriteListView = Image.createImage("/favoriteListView.png");
 			imageMapSearchView = Image.createImage("/mapSearchView.png");
 			imageGeocodingSearchView = Image.createImage("/geocodingSearchView.png");
-			imagePostboxView = imageFavoriteListView;
+			imagePostboxView = Image.createImage("/postboxView.png");
 		}
 		catch(IOException e)
 		{

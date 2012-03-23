@@ -36,10 +36,10 @@ public final class StationDetailsView extends Form implements CommandListener, R
 
 	private final Main midlet;
 
-	private final Command screenCommand;
-	private final Command showMapCommand;
+	private final Command backCommand;
+//	private final Command showMapCommand;
 //	private final Command removeFavoriteCommand;
-	private final Command exitCommand;
+//	private final Command exitCommand;
 	private final Command refreshCommand;
 
 	private BusStation currentStation;
@@ -59,16 +59,16 @@ public final class StationDetailsView extends Form implements CommandListener, R
 
 		this.midlet = midlet;
 
-		screenCommand = new Command("Zurück", Command.ITEM, 1);
+		backCommand = new Command("Zurück", Command.BACK, 1);
 //		removeFavoriteCommand = new Command("Favorit entfernen", Command.HELP, 1);
-		showMapCommand = new Command("Auf Karte zeigen", Command.HELP, 1);
+//		showMapCommand = new Command("Auf Karte zeigen", Command.HELP, 1);
 		refreshCommand = new Command("Aktualisieren", Command.HELP, 1);
-		exitCommand = new Command("Ende", Command.EXIT, 1);
+//		exitCommand = new Command("Ende", Command.EXIT, 1);
 
-		addCommand(screenCommand);
+		addCommand(backCommand);
 		//addCommand(showMapCommand);
 		addCommand(refreshCommand);
-		addCommand(exitCommand);
+//		addCommand(exitCommand);
 		setCommandListener(this);
 		setItemStateListener(this);
 
@@ -80,7 +80,7 @@ public final class StationDetailsView extends Form implements CommandListener, R
 
 	public void commandAction(Command c, Displayable d)
 	{
-		if(c == screenCommand)
+		if(c == backCommand)
 		{
 			midlet.setView(Main.STATION_LIST_VIEW);
 		}
@@ -88,19 +88,19 @@ public final class StationDetailsView extends Form implements CommandListener, R
 		{
 			refresh(false);
 		}
-		else if(c == showMapCommand)
-		{
-/*			
-			StationMapView stationMapView = (StationMapView) midlet.getView(Main.STATION_MAP_VIEW);
-			stationMapView.updateStation(currentStation);
-			midlet.setView(Main.STATION_MAP_VIEW);
-			*/
-		}
-		else if(c == exitCommand)
-		{
-			midlet.destroyApp(false);
-			midlet.notifyDestroyed();
-		}
+//		else if(c == showMapCommand)
+//		{
+///*			
+//			StationMapView stationMapView = (StationMapView) midlet.getView(Main.STATION_MAP_VIEW);
+//			stationMapView.updateStation(currentStation);
+//			midlet.setView(Main.STATION_MAP_VIEW);
+//			*/
+//		}
+//		else if(c == exitCommand)
+//		{
+//			midlet.destroyApp(false);
+//			midlet.notifyDestroyed();
+//		}
 	}
 
 

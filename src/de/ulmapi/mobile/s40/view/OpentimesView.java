@@ -44,10 +44,10 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 	private final Main midlet;
 
 	private final Command backCommand;
-	private final Command okCommand;
-	private final Command exitCommand;
-	private final Command deleteCommand;
-	private final Command choiceGrpClick;
+//	private final Command okCommand;
+//	private final Command exitCommand;
+//	private final Command deleteCommand;
+//	private final Command choiceGrpClick;
 	
 	private final StringItem stringItem = new StringItem("", "");
 	
@@ -56,17 +56,17 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 
 		this.midlet = midlet;
 
-		backCommand = new Command("Zurück", Command.SCREEN, 1);
-		okCommand = new Command("OK", Command.ITEM, 1);
-		exitCommand = new Command("Ende", Command.EXIT, 1);
-		deleteCommand = new Command("Löschen", Command.EXIT, 1);
-		choiceGrpClick = new Command("OK", Command.SCREEN, 1);
+		backCommand = new Command("Zurück", Command.BACK, 1);
+//		okCommand = new Command("OK", Command.ITEM, 1);
+//		exitCommand = new Command("Ende", Command.EXIT, 1);
+//		deleteCommand = new Command("Löschen", Command.EXIT, 1);
+//		choiceGrpClick = new Command("OK", Command.SCREEN, 1);
 		
 		
 
 		addCommand(backCommand);
 		//addCommand(okCommand);
-		addCommand(exitCommand);
+//		addCommand(exitCommand);
 		setCommandListener(this);
 		setItemStateListener(this);
 		
@@ -165,6 +165,9 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 							JSONObject address = (JSONObject) foobar.get("address");
 							String name = (String) foobar.getString("name");
 							name = replace("&eacute;", "é", name);
+							if (name.length() > 21) {
+								name = name.substring(0, 20) + "...";
+							}
 
 							String www = "";
 							String tel = "";
@@ -276,41 +279,41 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 		{
 			midlet.setView(Main.HOME_VIEW);
 		}
-		else if(c == okCommand)
-		{
-			HttpManager http = HttpManager.getInstance();
-			http.get("http://daten.ulmapi.de/plz/89231", new HttpResponseListener() {
-				
-				public void responseReceived(HttpResponse response) {
-					if(response.getStatusCode() == 200){
-						
-						JSONObject json;
-						try {
-							json = new JSONObject(new String(response.getEntity()));
-							String s = json.get("_id").toString();
-							stringItem.setLabel(s);
-							stringItem.setText(s);
-							//System.out.println(json.toString());
-						} catch (JSONException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-					}
-					
-				}
-			});
+//		else if(c == okCommand)
+//		{
+//			HttpManager http = HttpManager.getInstance();
+//			http.get("http://daten.ulmapi.de/plz/89231", new HttpResponseListener() {
+//				
+//				public void responseReceived(HttpResponse response) {
+//					if(response.getStatusCode() == 200){
+//						
+//						JSONObject json;
+//						try {
+//							json = new JSONObject(new String(response.getEntity()));
+//							String s = json.get("_id").toString();
+//							stringItem.setLabel(s);
+//							stringItem.setText(s);
+//							//System.out.println(json.toString());
+//						} catch (JSONException e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						}
+//						
+//					}
+//					
+//				}
+//			});
 //			gotoStationList();
-		}
-		else if(c == deleteCommand)
-		{
-//			removeFavorite(getSelectedStation());
-		}
-		else if(c == exitCommand)
-		{
-			midlet.destroyApp(false);
-			midlet.notifyDestroyed();
-		}
+//		}
+//		else if(c == deleteCommand)
+//		{
+////			removeFavorite(getSelectedStation());
+//		}
+//		else if(c == exitCommand)
+//		{
+//			midlet.destroyApp(false);
+//			midlet.notifyDestroyed();
+//		}
 	}
 	
 }
