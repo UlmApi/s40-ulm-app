@@ -130,7 +130,7 @@ public final class PostkastenView extends Form implements CommandListener, ItemC
 		
 		// all postboxes
 		String url = "http://daten.ulmapi.de/postkaesten/_all_docs?include_docs=true";
-		System.out.println(url);	
+		//System.out.println(url);	
 		
 		HttpManager http = HttpManager.getInstance();
 		http.get(url, new HttpResponseListener() {
