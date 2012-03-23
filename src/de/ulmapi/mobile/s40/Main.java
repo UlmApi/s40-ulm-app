@@ -13,7 +13,7 @@ import de.ulmapi.mobile.s40.view.HomeView;
 import de.ulmapi.mobile.s40.view.InfoView;
 import de.ulmapi.mobile.s40.view.OpentimesView;
 import de.ulmapi.mobile.s40.view.PostboxView;
-import de.ulmapi.mobile.s40.view.PostkastenView;
+import de.ulmapi.mobile.s40.view.PostboxListView;
 import de.ulmapi.mobile.s40.view.SplashView;
 import de.ulmapi.mobile.s40.view.gui.Refreshable;
 
