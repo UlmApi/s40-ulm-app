@@ -153,12 +153,16 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 						JSONArray foo = (JSONArray) json.get("rows");
 						System.out.println("length: " + foo.length());
 						
-						for (int i = 0; i < MAX_RESULTS; i++) {
+						//for (int i = 0; i < MAX_RESULTS; i++) {
+						int count = 25;
+						//for (int i = 0; i < count; i++) {
+						int i = 0;
+						int shown = 0;
+						while (shown < count) {
 						//for (int i = 0; i < foo.length(); i++) {
 							JSONObject bar = (JSONObject) foo.get(i);
 							JSONObject foobar = (JSONObject) bar.get("value");
 							JSONObject address = (JSONObject) foobar.get("address");
-							System.out.println(foobar.get("name"));
 							String name = (String) foobar.getString("name");
 							name = replace("&eacute;", "é", name);
 
@@ -166,9 +170,16 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 							String tel = "";
 							if (address.has("www")) www = (String) address.getString("www");
 							if (address.has("tel")) tel = (String) address.getString("tel");
-									
-							stationItems.addElement(new OpentimesItem(name,
+							
+							System.out.println((String) address.get("plz"));
+							
+							if (((String) address.get("plz")).indexOf("Ulm") > -1) {
+								System.out.println(foobar.get("name") + " added..");
+								stationItems.addElement(new OpentimesItem(name,
 									(String) address.get("street"), (String) address.get("plz"), www, tel ));
+								shown++;
+							}
+							i++;
 						}
 						showResults();
 						
@@ -202,7 +213,7 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 	    }
 	}
 	
-	protected static final int MAX_RESULTS = 25;
+	protected static final int MAX_RESULTS = 30;
 
 	private StationMapItem stationMapItem = null;
 	private Vector stationItems = new Vector();
@@ -279,7 +290,7 @@ public final class OpentimesView extends Form implements CommandListener, ItemCo
 							String s = json.get("_id").toString();
 							stringItem.setLabel(s);
 							stringItem.setText(s);
-							System.out.println(json.toString());
+							//System.out.println(json.toString());
 						} catch (JSONException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
