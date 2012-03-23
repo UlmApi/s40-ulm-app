@@ -72,7 +72,7 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 	}
 	
 	
-	protected static final int MAX_RESULTS = 15;
+	protected static final int MAX_RESULTS = 40;
 
 	private StationMapItem stationMapItem = null;
 	private Vector postboxItems = new Vector();
@@ -116,6 +116,7 @@ public final class PostboxView extends MapCanvas implements CommandListener, Ref
 							
 							location = new Wgs84Coordinate(Double.parseDouble(foobar.getString("lat")), Double.parseDouble(foobar.getString("lon"))) ;
 							marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "", MapShapeType.rectangle);
+							
 							//marker = mapFactory.createStandardMarker(new GeoCoordinate(location.getLatitude(), location.getLongitude(), 0), 12, "Postbox", MapShapeType.rectangle);
 							map.addMapObject(marker);
 							System.out.println("added " + location.getLatitude() + ", " + location.getLongitude());

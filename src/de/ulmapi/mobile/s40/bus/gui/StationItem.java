@@ -64,7 +64,8 @@ public class StationItem extends CustomItem
 		g.setFont(lineFont);
 		g.drawString(line, 20, 12, Graphics.TOP | Graphics.HCENTER);
 
-		g.setColor(0x000000);
+		g.setColor(0xFFFFFF);
+		//g.setColor(0x000000);
 
 		g.setFont(defaultFont);
 		g.drawString(target, 44, 4, Graphics.TOP | Graphics.LEFT);
