@@ -11,6 +11,7 @@ import de.ulmapi.mobile.s40.bus.view.StationMapView;
 import de.ulmapi.mobile.s40.view.DummyView;
 import de.ulmapi.mobile.s40.view.HomeView;
 import de.ulmapi.mobile.s40.view.InfoView;
+import de.ulmapi.mobile.s40.view.MapView;
 import de.ulmapi.mobile.s40.view.OpentimesView;
 import de.ulmapi.mobile.s40.view.PostboxView;
 import de.ulmapi.mobile.s40.view.PostboxListView;
@@ -30,12 +31,14 @@ public final class Main extends MIDlet
 	public static final int STATION_MAP_VIEW = 22;
 	
 	public static final int POSTBOX_VIEW = 30;
+	public static final int MAP_VIEW = 40;
 	
 	public static final String HOME_VIEW_TITLE = "OpenUlmApp";
 	public static final String INFO_VIEW_TITLE = "Informationen";
 	public static final String DUMMY_VIEW_TITLE = "Abfahrtszeiten";
 	public static final String OPENTIMES_VIEW_TITLE = "Was hat offen?";
 	public static final String POSTBOX_VIEW_TITLE = "Postkästen";
+//	public static final String MAP_VIEW_TITLE = "Postkästen";
 	
 	public static final String STATION_LIST_VIEW_TITLE = "Haltestellen";
 	public static final String STATION_DETAILS_VIEW_TITLE = "Abfahrtszeiten";
@@ -53,6 +56,7 @@ public final class Main extends MIDlet
 	
 	private PostboxView postboxView;
 	//private PostkastenView postboxView;
+	private MapView mapView;
 	
 	private OpentimesView opentimesView;
 
@@ -83,6 +87,7 @@ public final class Main extends MIDlet
 			
 			postboxView = new PostboxView(this);
 			//postboxView = new PostkastenView(this);
+			mapView = new MapView(this);
 			
 			opentimesView = new OpentimesView(this);
 		}
@@ -102,23 +107,43 @@ public final class Main extends MIDlet
 	public Displayable getView(int viewCode)
 	{
 
+//		switch(viewCode)
+//		{
+//			case HOME_VIEW: 				return homeView;
+//			
+//			case DUMMY_VIEW: 				return dummyView;
+//			
+//			case INFO_VIEW: 				return infoView;
+//	
+//			case STATION_LIST_VIEW: 		return stationListView;
+//			case STATION_DETAILS_VIEW: 		return stationDetailsView;
+//			case STATION_MAP_VIEW:			return stationMapView;
+//			
+//			case POSTBOX_VIEW:				return postboxView;
+//			
+//			case MAP_VIEW:					return mapView;
+//			
+//			case OPENTIMES_VIEW:			return opentimesView;
+//			
+//			default: 						return homeView;
+//		}
 		switch(viewCode)
 		{
-			case HOME_VIEW: 				return homeView;
-			
-			case DUMMY_VIEW: 				return dummyView;
-			
-			case INFO_VIEW: 				return infoView;
+			case HOME_VIEW: 				return new HomeView(this);
+
+			case INFO_VIEW: 				return new InfoView(this);
 	
-			case STATION_LIST_VIEW: 		return stationListView;
-			case STATION_DETAILS_VIEW: 		return stationDetailsView;
-			case STATION_MAP_VIEW:			return stationMapView;
+			case STATION_LIST_VIEW: 		return new StationListView(this);
+			case STATION_DETAILS_VIEW: 		return new StationDetailsView(this);
+			case STATION_MAP_VIEW:			return new StationMapView(this);
 			
-			case POSTBOX_VIEW:				return postboxView;
+			//case POSTBOX_VIEW:				return postboxView;
 			
-			case OPENTIMES_VIEW:			return opentimesView;
+			case MAP_VIEW:					return new MapView(this);
 			
-			default: 						return homeView;
+			case OPENTIMES_VIEW:			return new OpentimesView(this);
+			
+			default: 						return new HomeView(this);
 		}
 	}
 

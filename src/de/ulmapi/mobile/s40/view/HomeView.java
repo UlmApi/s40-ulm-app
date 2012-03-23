@@ -90,7 +90,7 @@ public final class HomeView extends Canvas implements CommandListener
 		{
 			g.fillRect(0, 1, getWidth() / 2, getHeight() / 2);
 		}
-		else if(selected == Main.POSTBOX_VIEW)
+		else if(selected == Main.MAP_VIEW)
 		{
 			g.fillRect(getWidth() / 2 + 1, 1, getWidth(), getHeight() / 2);
 		}
@@ -142,42 +142,49 @@ public final class HomeView extends Canvas implements CommandListener
 	public void pointerPressed(int x, int y)
 	{
 		//TODO: fix touch navigation when navigation is final
-		
-		pressedField = true;
-
-		if(x <= getWidth() / 2 && y > 0 && y <= getHeight() / 2)
-		{
-			selected = Main.STATION_LIST_VIEW;
-			repaint();
-			serviceRepaints();
-			midlet.setView(selected);
-		}
-		else if(x > getWidth() / 2 && y > 0 && y <= getHeight() / 2)
-		{
-			selected = Main.POSTBOX_VIEW;
-			repaint();
-			serviceRepaints();
-			//PostboxView postboxView = (PostboxView) midlet.getView(Main.POSTBOX_VIEW);
-			//PostkastenView postboxView = (PostkastenView) midlet.getView(Main.POSTBOX_VIEW);
-			//postboxView.updatePostboxes();
-			//postboxView.showPostboxes();
-			midlet.setView(selected);
-		}
-		else if(x <= getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
-		{
-			selected = Main.OPENTIMES_VIEW;
-			repaint();
-			serviceRepaints();
-			//((OpentimesView) midlet.getView(selected)).isChangeOriginHome(true);
-			midlet.setView(selected);
-		}
-		else if(x > getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
-		{
-//			selected = Main.GEOCODING_SEARCH_VIEW;
-			selected = Main.INFO_VIEW;
-			repaint();
-			serviceRepaints();
-			midlet.setView(selected);
+		try {
+			pressedField = true;
+	
+			if(x <= getWidth() / 2 && y > 0 && y <= getHeight() / 2)
+			{
+				selected = Main.STATION_LIST_VIEW;
+				repaint();
+				serviceRepaints();
+				midlet.setView(selected);
+			}
+			else if(x > getWidth() / 2 && y > 0 && y <= getHeight() / 2)
+			{
+				selected = Main.MAP_VIEW;
+				repaint();
+				serviceRepaints();
+				//PostboxView postboxView = (PostboxView) midlet.getView(Main.POSTBOX_VIEW);
+				//PostkastenView postboxView = (PostkastenView) midlet.getView(Main.POSTBOX_VIEW);
+				//postboxView.updatePostboxes();
+				//postboxView.showPostboxes();
+//				MapView mapView = (MapView) midlet.getView(Main.MAP_VIEW);
+				MapView mapView = (MapView) midlet.getView(Main.MAP_VIEW);
+				mapView.setMapMode(Main.POSTBOX_VIEW);
+				mapView.updatePostboxes();
+				midlet.setView(selected);
+			}
+			else if(x <= getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
+			{
+				selected = Main.OPENTIMES_VIEW;
+				repaint();
+				serviceRepaints();
+				//((OpentimesView) midlet.getView(selected)).isChangeOriginHome(true);
+				midlet.setView(selected);
+			}
+			else if(x > getWidth() / 2 && y > getHeight() / 2 && y <= getHeight())
+			{
+	//			selected = Main.GEOCODING_SEARCH_VIEW;
+				selected = Main.INFO_VIEW;
+				repaint();
+				serviceRepaints();
+				midlet.setView(selected);
+			}
+		}catch (NullPointerException e){
+			e.printStackTrace();
 		}
 	}
 
