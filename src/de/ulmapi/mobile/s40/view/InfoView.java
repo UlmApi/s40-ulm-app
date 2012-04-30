@@ -15,7 +15,7 @@ public final class InfoView extends Form implements CommandListener, ItemStateLi
 {
 	private final Main midlet;
 
-	private final Command itemCommand;
+	private final Command backCommand;
 
 	private StringItem stringItem = null;
 	private StringItem mitItem = null;
@@ -38,9 +38,9 @@ public final class InfoView extends Form implements CommandListener, ItemStateLi
 
 		this.midlet = midlet;
 
-		itemCommand = new Command("Zurück", Command.ITEM, 1);
+		backCommand = new Command("Zurück", Command.BACK, 1);
 
-		addCommand(itemCommand);
+		addCommand(backCommand);
 
 		stringItem = new StringItem("Über diese Anwendung", infoTxt);
 		stringItem.setFont(stdFont);
@@ -59,7 +59,7 @@ public final class InfoView extends Form implements CommandListener, ItemStateLi
 
 	public void commandAction(Command c, Displayable d)
 	{
-		if(c == itemCommand)
+		if(c == backCommand)
 		{
 			midlet.setView(Main.HOME_VIEW);
 		}

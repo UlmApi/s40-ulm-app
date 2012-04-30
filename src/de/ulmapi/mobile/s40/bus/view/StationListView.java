@@ -28,9 +28,9 @@ public final class StationListView extends Form implements CommandListener, Item
 {
 	private final Main midlet;
 
-	private final Command screenCommand;
+//	private final Command screenCommand;
 	private final Command itemCommand;
-	private final Command exitCommand;
+	private final Command backCommand;
 	private final Command choiceGrpClick;
 
 	private final TextField searchField;
@@ -48,14 +48,14 @@ public final class StationListView extends Form implements CommandListener, Item
 
 		this.midlet = midlet;
 
-		screenCommand = new Command("Zurück", Command.SCREEN, 1);
+		backCommand = new Command("Zurück", Command.BACK, 1);
 		itemCommand = new Command("OK", Command.ITEM, 1);
-		exitCommand = new Command("Ende", Command.EXIT, 1);
+//		exitCommand = new Command("Ende", Command.EXIT, 1);
 		choiceGrpClick = new Command("OK", Command.SCREEN, 1);
 
-		addCommand(screenCommand);
+//		addCommand(screenCommand);
 		addCommand(itemCommand);
-		addCommand(exitCommand);
+		addCommand(backCommand);
 		setCommandListener(this);
 
 		setItemStateListener(this);
@@ -87,7 +87,7 @@ public final class StationListView extends Form implements CommandListener, Item
 
 	public void commandAction(Command c, Displayable d)
 	{
-		if(c == screenCommand)
+		if(c == backCommand)
 		{
 			midlet.setView(Main.HOME_VIEW);
 		}
@@ -95,11 +95,11 @@ public final class StationListView extends Form implements CommandListener, Item
 		{
 			gotoStationList();
 		}
-		else if(c == exitCommand)
-		{
-			midlet.destroyApp(false);
-			midlet.notifyDestroyed();
-		}
+//		else if(c == exitCommand)
+//		{
+//			midlet.destroyApp(false);
+//			midlet.notifyDestroyed();
+//		}
 	}
 
 	private void gotoStationList()

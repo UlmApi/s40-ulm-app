@@ -59,7 +59,8 @@ public class HeadingItem extends CustomItem
 		if(s2 != null)
 		{
 			g.setFont(Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, Font.SIZE_SMALL));
-			g.setColor(0x333333);
+//			g.setColor(0x333333);
+			g.setColor(0xFFFFFF);
 			g.drawString(s2, 2, 22, Graphics.TOP | Graphics.LEFT);
 		}
 	}

@@ -67,7 +67,7 @@ public class OpentimesItem extends CustomItem
 		g.setColor(255, 255, 255);
 		Font lineFont = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, Font.SIZE_MEDIUM);
 		g.setFont(lineFont);
-		g.drawString(name, 20, 6, Graphics.TOP | Graphics.LEFT);
+		g.drawString(name, 20, 4, Graphics.TOP | Graphics.LEFT);
 
 		g.setColor(0x000000);
 
