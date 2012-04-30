@@ -10,6 +10,8 @@ lets you comfortably access information on interesting city stuff.
  * local restaurants and bars that have opened right now are displayed
  * the next bus and tram stations are displayed on a map
 
+![Screenshot](https://github.com/ulmapi/s40-ulm-app/raw/master/screenshot.jpg)
+
 
 # Icons used
 
